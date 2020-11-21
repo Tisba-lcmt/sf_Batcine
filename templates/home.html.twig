@@ -1,0 +1,203 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Accueil
+{% endblock title %}
+
+{% block main %}
+
+{# MAIN #}
+<main class="container-fluid position-relative">
+    {# FIL D'ARIANNE #}
+    <div>
+        <ul>
+            <li class="breadcrumb">
+                <a href="{{ path('homepage') }}" class="item">Accueil</a>
+            </li>
+        </ul>
+    </div>
+    {# SECTION ACTUALITES #}
+    <section class="container">
+        <h1 class="text-center my-lg-5">Actualités</h1>
+        <div class="row align-items-center justify-content-around">
+            <div class="col-lg-5">
+                <img src="{{ asset('assets/img/actualites/Claude-Lelouch.jpg') }}" alt="" class="img-fluid">
+            </div>
+            <article class="col-lg-5">
+                <p class="txtJustify">Claude Lelouch réunit une vaste distribution pour son dernier film. Il s'est confié sur le tournage de son
+                    prochain et dernier long métrage, "L'Amour, c'est mieux que la vie". Il y réunira un casting hétéroclite,
+                    parmi lesquels Jean-Louis Trintignant, Kev Adams et Béatrice Dalle.</p>
+            </article>
+
+            <article class="col-lg-5">
+                <p class="txtJustify">Bande-annonce Les Cobayes : Thomas Ngijol et Judith Chemla prêts à tout pour sauver leur couple.
+                    Découvrez la bande-annonce des Cobayes, une comédie sur le désir et la passion dans le couple, portée par
+                    Thomas Ngijol et Judith Chemla. Au cinéma le 25 novembre.
+                </p>
+            </article>
+            <div class="col-lg-5  mt-lg-5"><img src="{{ asset('assets/img/actualites/Les-Cobayes.jpg') }}" alt="" class="img-fluid"></div>
+        </div>
+        {# BOUTON VOIR PLUS #}
+        <div class="row justify-content-end my-lg-5">
+            <div class="col-lg-2 my-lg-3" id="buttonmore">
+                <a href="actualites.html">
+                    <div class="row align-items-center justify-content-between">
+                        <span class="col-lg-3 text-center ml-lg-3 my-lg-2">Voir</span>
+                        <span class="col-lg-3 text-center ml-lg-0 p-0 my-lg-2"> plus</span>
+                        <div class="col-lg-4 my-lg-2">
+                            {# ICON VOIR PLUS #}
+                            <img src="{{ asset('assets/img/icon/more.svg') }}" alt="Voir plus" title="Voir Plus" class="img-fluid">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    {# SECTION FILMS À L'AFFICHE #}
+    <section class="container">
+        <h1 class="text-center my-lg-5">Films à l'affiche</h1>
+        <div class="row align-items-center justify-content-around">
+            <div class="col-lg-3">
+                <!-- PREMIER FILM -->
+                <a href="modele_film.html">
+                    <img src="{{ asset('assets/img/films/affiches/antoinettes_dans_les_cevennes.jpg') }}" alt="Antoinettes dans les Cévennes"
+                         title="Antoinettes dans les Cévennes" class="img-fluid">
+                    <h2 class="mt-lg-3">Antoinette dans les Cévennes</h2>
+                    <h3>De :<span> Caroline Vignal</span></h3>
+                </a>
+            </div>
+            <div class="col-lg-3">
+                {# DEUXIEME FILM #}
+                <a href="modele_film.html">
+                    <img src="{{ asset('assets/img/films/affiches/mon_cousin.jpg') }}" alt="Mon cousin" title="Mon cousin" class="img-fluid">
+                    <h2 class="mt-lg-3">Mon Cousin</h2>
+                    <h3>De :<span> Jan Kounen</span></h3>
+                </a>
+            </div>
+            <div class="col-lg-3">
+                {# TROISIEME FILM #}
+                <a href="modele_film.html">
+                    <img src="{{ asset('assets/img/films/affiches/tenet.jpg') }}" alt="Tenet" title="Tenet" class="img-fluid">
+                    <h2 class="mt-lg-3">Tenet</h2>
+                    <h3>De :<span> Christopher Nolan</span></h3>
+                </a>
+            </div>
+        </div>
+        {# BOUTON VOIR PLUS #}
+        <div class="row justify-content-end my-lg-5">
+            <div class="col-lg-2 my-lg-3" id="buttonmore">
+                <a href="film_a_l_affiche.html">
+                    <div class="row align-items-center justify-content-between">
+                        <span class="col-lg-3 text-center ml-lg-3 my-lg-2">Voir</span>
+                        <span class="col-lg-3 text-center ml-lg-0 p-0 my-lg-2"> plus</span>
+                        <div class="col-lg-4 my-lg-2">
+                            <img src="{{ asset('assets/img/icon/more.svg') }}" alt="Voir plus" title="Voir Plus" class="img-fluid">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    {# SECTION FILMS PROCHAINEMENT #}
+    <section class="container">
+        <h1 class="text-center my-lg-5">Films Prochainement</h1>
+        <div class="row align-items-center justify-content-around">
+            <div class="col-lg-3">
+                {# PREMIER FILM #}
+                <a href="modele_film.html">
+                    <img src="{{ asset('assets/img/films/prochainement/mourir_peut_attendre.jpg') }}" alt="Mourir peut attendre"
+                         title="Mourir peut attendre" class="img-fluid">
+                    <h2 class="mt-lg-3">Mourir peut attendre</h2>
+                    <h3>De :<span> Cary Joji Fukunaga</span></h3>
+                </a>
+            </div>
+            <div class="col-lg-3">
+                {# DEUXIEME FILM #}
+                <a href="modele_film.html">
+                    <img src="{{ asset('assets/img/films/prochainement/30_jours_max.jpg') }}" alt="30 jours max" title="30 jours max"
+                         class="img-fluid">
+                    <h2 class="mt-lg-3">30 jours max</h2>
+                    <h3>De :<span> Tarek Boudali</span></h3>
+                </a>
+            </div>
+            <div class="col-lg-3">
+                {# TROISIEME FILM #}
+                <a href="modele_film.html">
+                    <img src="{{ asset('assets/img/films/prochainement/the_singing_club.jpg') }}" alt="The singing club"
+                         title="The singing club" class="img-fluid">
+                    <h2 class="mt-lg-3">The Singing Club</h2>
+                    <h3>De :<span> Peter Cattaneo</span></h3>
+                </a>
+            </div>
+        </div>
+        {# BOUTON VOIR PLUS #}
+        <div class="row justify-content-end my-lg-5">
+            <div class="col-lg-2 my-lg-3" id="buttonmore">
+                <a href="prochainement.html">
+                    <div class="row align-items-center justify-content-between">
+                        <span class="col-lg-3 text-center ml-lg-3 my-lg-2">Voir</span>
+                        <span class="col-lg-3 text-center ml-lg-0 p-0 my-lg-2"> plus</span>
+                        <div class="col-lg-4 my-lg-2">
+                            {# ICON VOIR PLUS #}
+                            <img src="{{ asset('assets/img/icon/more.svg') }}" alt="Voir plus" title="Voir Plus" class="img-fluid">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    {# SECTION NOUVELLES SERIES #}
+    <section class="container">
+        <h1 class="text-center my-lg-5">Nouvelles series</h1>
+        <div class="row justify-content-around">
+            <div class="col-lg-3">
+                {# PREMIER FILM #}
+                <a href="modele_film.html">
+                    <img src="{{ asset('assets/img/series/affiches/la_flamme.jpg') }}" alt="La flamme" title="La flamme" class="img-fluid">
+                    <h2 class="mt-lg-3">La Flamme</h2>
+                    <h3>De :<span> Jonathan Cohen, Jérémie Galan, Florent Bernard</span></h3>
+                </a>
+            </div>
+            <div class="col-lg-3">
+                {# DEUXIEME FILM #}
+                <a href="modele_film.html">
+                    <img src="{{ asset('assets/img/series/affiches/le_mensonge.jpg') }}" alt="Le mensonge" title="Le mensonge"
+                         class="img-fluid">
+                    <h2 class="mt-lg-3">Le Mensonge</h2>
+                    <h3>De :<span> Vincent Garenq</span></h3>
+                </a>
+            </div>
+            <div class="col-lg-3">
+                {# TROISIEME FILM #}
+                <a href="modele_film.html">
+                    <img src="{{ asset('assets/img/series/affiches/no_mans_land.jpg') }}" alt="No Mans Land" title="No Mans Land"
+                         class="img-fluid">
+                    <h2 class="mt-lg-3">No Man's Land</h2>
+                    <h3>De :<span> Maria Feldman, Eitan Mansuri, Amit Cohen</span></h3>
+                </a>
+            </div>
+        </div>
+        {# BOUTON VOIR PLUS #}
+        <div class="row justify-content-end my-lg-5">
+            <div class="col-lg-2 my-lg-3" id="buttonmore">
+                <a href="series.html">
+                    <div class="row align-items-center justify-content-between">
+                        <span class="col-lg-3 text-center ml-lg-3 my-lg-2">Voir</span>
+                        <span class="col-lg-3 text-center ml-lg-0 p-0 my-lg-2"> plus</span>
+                        <div class="col-lg-4 my-lg-2">
+                            {# ICON VOIR PLUS #}
+                            <img src="{{ asset('assets/img/icon/more.svg') }}" alt="Voir plus" title="Voir Plus" class="img-fluid">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <a href="#">
+        <div class="return-top_position position-fixed">
+            <img src="{{ asset('assets/img/icon/return_top.svg') }}" alt="" class="return_top_icon">
+        </div>
+    </a>
+</main>
+
+{% endblock main %}
