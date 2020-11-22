@@ -15,14 +15,14 @@ class NewsController extends AbstractController
 
     public function newsList()
     {
-        dd("Ma liste d'actualités");
+        return $this->render('news.html.twig');
     }
 
     /**
      * @Route("/new/{id}", name="new_show")
      */
 
-    public function newsShow()
+    public function newShow()
     {
         dd("Mon actualité");
     }

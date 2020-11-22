@@ -1,0 +1,157 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Actualités
+{% endblock title %}
+
+{% block main %}
+
+{# MAIN #}
+<main class="container-fluid position-relative">
+    {# FIL D'ARIANNE #}
+    <div>
+        <ul>
+            <li class="breadcrumb">
+                <a href="{{ path('homepage') }}" class="item">Accueil</a>
+                <a href="{{ path('news_list') }}" class="item">Actualités</a>
+            </li>
+        </ul>
+    </div>
+    {# SECTION ACTUALITES #}
+    <section class="container">
+        <h1 class="text-center my-lg-5">Actualités</h1>
+        <div class="row align-items-center justify-content-around">
+            {# Actu 1 #}
+            <div class="col-lg-5">
+                <img src="{{ asset('assets/img/actualites/Claude-Lelouch.jpg') }}" alt="" class="img-fluid">
+            </div>
+            <article class="col-lg-5">
+                <p class="txtJustify">Claude Lelouch réunit une vaste distribution pour son dernier film. Il s'est confié sur le
+                    tournage de son
+                    prochain et dernier long métrage, "L'Amour, c'est mieux que la vie". Il y réunira un casting
+                    hétéroclite,
+                    parmi lesquels Jean-Louis Trintignant, Kev Adams et Béatrice Dalle.</p>
+            </article>
+            {# Actu 2 #}
+            <article class="col-lg-5">
+                <p class="txtJustify">Bande-annonce Les Cobayes : Thomas Ngijol et Judith Chemla prêts à tout pour sauver leur couple.
+                    Découvrez la bande-annonce des Cobayes, une comédie sur le désir et la passion dans le couple,
+                    portée par
+                    Thomas Ngijol et Judith Chemla. Au cinéma le 25 novembre.
+                </p>
+            </article>
+            <div class="col-lg-5  my-lg-5"><img src="{{ asset('assets/img/actualites/Les-Cobayes.jpg') }}" alt="" class="img-fluid">
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-around">
+            {# Actu 3 #}
+            <div class="col-lg-5">
+                <img src="{{ asset('assets/img/actualites/Claude-Lelouch.jpg') }}" alt="" class="img-fluid">
+            </div>
+            <article class="col-lg-5">
+                <p class="txtJustify">Claude Lelouch réunit une vaste distribution pour son dernier film. Il s'est confié sur le
+                    tournage de son
+                    prochain et dernier long métrage, "L'Amour, c'est mieux que la vie". Il y réunira un casting
+                    hétéroclite,
+                    parmi lesquels Jean-Louis Trintignant, Kev Adams et Béatrice Dalle.</p>
+            </article>
+            {# Actu 4 #}
+            <article class="col-lg-5">
+                <p class="txtJustify">Bande-annonce Les Cobayes : Thomas Ngijol et Judith Chemla prêts à tout pour sauver leur couple.
+                    Découvrez la bande-annonce des Cobayes, une comédie sur le désir et la passion dans le couple,
+                    portée par
+                    Thomas Ngijol et Judith Chemla. Au cinéma le 25 novembre.
+                </p>
+            </article>
+            <div class="col-lg-5  my-lg-5"><img src="{{ asset('assets/img/actualites/Les-Cobayes.jpg') }}" alt="" class="img-fluid">
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-around">
+            {# Actu 5 #}
+            <div class="col-lg-5">
+                <img src="{{ asset('assets/img/actualites/Claude-Lelouch.jpg') }}" alt="" class="img-fluid">
+            </div>
+            <article class="col-lg-5">
+                <p class="txtJustify">Claude Lelouch réunit une vaste distribution pour son dernier film. Il s'est confié sur le
+                    tournage de son
+                    prochain et dernier long métrage, "L'Amour, c'est mieux que la vie". Il y réunira un casting
+                    hétéroclite,
+                    parmi lesquels Jean-Louis Trintignant, Kev Adams et Béatrice Dalle.</p>
+            </article>
+            {# Actu 6 #}
+            <article class="col-lg-5">
+                <p class="txtJustify">Bande-annonce Les Cobayes : Thomas Ngijol et Judith Chemla prêts à tout pour sauver leur couple.
+                    Découvrez la bande-annonce des Cobayes, une comédie sur le désir et la passion dans le couple,
+                    portée par
+                    Thomas Ngijol et Judith Chemla. Au cinéma le 25 novembre.
+                </p>
+            </article>
+            <div class="col-lg-5  my-lg-5"><img src="{{ asset('assets/img/actualites/Les-Cobayes.jpg') }}" alt="" class="img-fluid">
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-around">
+            {# Actu 7 #}
+            <div class="col-lg-5">
+                <img src="{{ asset('assets/img/actualites/Claude-Lelouch.jpg') }}" alt="" class="img-fluid">
+            </div>
+            <article class="col-lg-5">
+                <p class="txtJustify">Claude Lelouch réunit une vaste distribution pour son dernier film. Il s'est confié sur le
+                    tournage de son
+                    prochain et dernier long métrage, "L'Amour, c'est mieux que la vie". Il y réunira un casting
+                    hétéroclite,
+                    parmi lesquels Jean-Louis Trintignant, Kev Adams et Béatrice Dalle.</p>
+            </article>
+            {# Actu 8 #}
+            <article class="col-lg-5">
+                <p class="txtJustify">Bande-annonce Les Cobayes : Thomas Ngijol et Judith Chemla prêts à tout pour sauver leur couple.
+                    Découvrez la bande-annonce des Cobayes, une comédie sur le désir et la passion dans le couple,
+                    portée par
+                    Thomas Ngijol et Judith Chemla. Au cinéma le 25 novembre.
+                </p>
+            </article>
+            <div class="col-lg-5  my-lg-5"><img src="{{ asset('assets/img/actualites/Les-Cobayes.jpg') }}" alt="" class="img-fluid">
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-around">
+            {# Actu 9 #}
+            <div class="col-lg-5">
+                <img src="{{ asset('assets/img/actualites/Claude-Lelouch.jpg') }}" alt="" class="img-fluid">
+            </div>
+            <article class="col-lg-5">
+                <p class="txtJustify">Claude Lelouch réunit une vaste distribution pour son dernier film. Il s'est confié sur le
+                    tournage de son
+                    prochain et dernier long métrage, "L'Amour, c'est mieux que la vie". Il y réunira un casting
+                    hétéroclite,
+                    parmi lesquels Jean-Louis Trintignant, Kev Adams et Béatrice Dalle.</p>
+            </article>
+            {# Actu 10 #}
+            <article class="col-lg-5">
+                <p class="txtJustify">Bande-annonce Les Cobayes : Thomas Ngijol et Judith Chemla prêts à tout pour sauver leur couple.
+                    Découvrez la bande-annonce des Cobayes, une comédie sur le désir et la passion dans le couple,
+                    portée par
+                    Thomas Ngijol et Judith Chemla. Au cinéma le 25 novembre.
+                </p>
+            </article>
+            <div class="col-lg-5  my-lg-5"><img src="{{ asset('assets/img/actualites/Les-Cobayes.jpg') }}" alt="" class="img-fluid">
+            </div>
+        </div>
+        {# BOUTON NEXT PAGE #}
+        <div class="row text-center justify-content-center align-items-center my-lg-5">
+            <div class="col-lg-2 py-lg-1" id="buttonnext_page">
+                <span class="text-center TailleSpanPage ">Page 1</span>
+            </div>
+            <div class="col-lg-1">
+                {# ICON NEXT PAGE #}
+                <img src="{{ asset('assets/img/icon/next_page_right.svg') }}" alt="Page 1" title="Page 1" class="img-fluid"
+                     id="next_page">
+            </div>
+        </div>
+    </section>
+    <a href="#">
+        <div class="return-top_position position-fixed">
+            <img src="{{ asset('assets/img/icon/return_top.svg') }}" alt="" class="return_top_icon">
+        </div>
+    </a>
+</main>
+
+{% endblock main %}
