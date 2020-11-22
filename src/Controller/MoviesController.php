@@ -15,9 +15,7 @@ class MoviesController extends AbstractController
 
     public function moviesList()
     {
-        dump("Films à l'affiche");
-
-        dd("Films prochainement");
+        return $this->render('movies.html.twig');
     }
 
     /**

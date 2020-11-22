@@ -40,7 +40,7 @@
         {# BOUTON VOIR PLUS #}
         <div class="row justify-content-end my-lg-5">
             <div class="col-lg-2 my-lg-3" id="buttonmore">
-                <a href="actualites.html">
+                <a href="{{ path('news_list') }}">
                     <div class="row align-items-center justify-content-between">
                         <span class="col-lg-3 text-center ml-lg-3 my-lg-2">Voir</span>
                         <span class="col-lg-3 text-center ml-lg-0 p-0 my-lg-2"> plus</span>
@@ -58,7 +58,7 @@
         <h1 class="text-center my-lg-5">Films à l'affiche</h1>
         <div class="row align-items-center justify-content-around">
             <div class="col-lg-3">
-                <!-- PREMIER FILM -->
+                {# PREMIER FILM #}
                 <a href="modele_film.html">
                     <img src="{{ asset('assets/img/films/affiches/antoinettes_dans_les_cevennes.jpg') }}" alt="Antoinettes dans les Cévennes"
                          title="Antoinettes dans les Cévennes" class="img-fluid">
