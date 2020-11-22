@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class MoviesController extends AbstractController
 {
     /**
-     * @Route("movies", name="movies_list")
+     * @Route("/movies", name="movies_list")
      */
 
     public function moviesList()
@@ -30,11 +30,29 @@ class MoviesController extends AbstractController
     }
 
     /**
-     * @Route("currentMovieShow", name="currentMovies_show")
+     * @Route("/currentMovieShow", name="currentMovie_show")
      */
 
     public function currentMovieShow()
     {
-        dd("Mon film");
+        dd("Mon film actuel");
+    }
+
+    /**
+     * @Route("/upcomingMoviesList", name="upcomingMovies_list")
+     */
+
+    public function upcomingMoviesList()
+    {
+        dd("Les films à venir");
+    }
+
+    /**
+     * @Route("/upcomingMovieShow", name="upcomingMovie_show")
+     */
+
+    public function upcomingMovieShow()
+    {
+        dd("Mon film à venir");
     }
 }

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f6e2f55-ff5b-4710-8672-ece12f24ff12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/movies.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/MoviesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MoviesController.php" afterDir="false" />
     </list>
@@ -151,7 +150,7 @@
       <updated>1605895612719</updated>
       <workItem from="1605895613808" duration="267000" />
       <workItem from="1605953481446" duration="18453000" />
-      <workItem from="1606044880667" duration="12574000" />
+      <workItem from="1606044880667" duration="13977000" />
     </task>
     <servers />
   </component>
