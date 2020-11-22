@@ -1,0 +1,238 @@
+/**** GENERAL RULES ****/
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style-type: none;
+}
+li>a {
+    color: rgb(84, 194,240);
+}
+li>a:hover, .active {
+    text-decoration: none;
+    color: rgb(40 , 46 , 103);
+}
+a:hover {
+    text-decoration: none;
+}
+
+/**** START HEADER ****/
+.cercle{
+    position:absolute;
+    bottom:-50px;
+    left:50%;
+    z-index:1000;
+    transform: translateX(-50%);
+}
+#circletransp {
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+     background-color: rgba(84, 194,240, 0.3);
+     position: relative;
+}
+#circletransp img{
+     position:absolute;
+     top:50%;
+     left:50%;
+     transform:translate(-50%,-50%);
+}
+#login {
+     height: 15%;
+}
+#login {
+    position: absolute;
+    right:-100px;
+    top:0;
+}
+header > nav{
+    height:10vh;
+    margin-top: 2vh;
+}
+
+    /**** Carousel ****/
+    #top15filmfrfin2020{
+        height:88vh;
+        overflow: hidden;
+    }
+
+    /**** Sub Menu ****/
+    .sub {
+        display: none;
+    }
+    .sub1 {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-color: white;
+    }
+    .sub2 {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background-color: white;
+    }
+    li.menu:hover .sub {
+        display: block;
+    }
+
+    /**** Z-index ****/
+    .z_menu {
+        z-index: 900;
+    }
+/**** END HEADER ****/
+
+/**** START MAIN ****/
+.background {
+    background-color: salmon;
+    height: 300px;
+    margin-top: 150px;
+}
+.trait {
+    background-color: rgb(84, 194,240);
+    border-radius: 25px;
+    height: 3px;
+    width: 700px;
+}
+
+    /**** Breadcrumb trail ****/
+    .breadcrumb {
+        background-color: white;
+    }
+    .breadcrumb .item:after{
+        content: ">";
+        display: inline-block;
+        margin: 0 4px;
+    }
+    .item:after {
+        color: rgb(40,46,103);
+    }
+    .item:hover:after {
+        color: rgb(84, 194,240);
+    }
+
+    /**** General Typography ****/
+    article > p {
+        color: rgb(40,46,103);
+    }
+    .typohead, h1{
+         font-family:'Kalam', sans-serif;
+         text-transform: uppercase;
+    }
+    h1, h2, h3, li > span {
+         color: rgb(40,46,103);
+    }
+    h2 {
+         font-size: 16px;
+    }
+    h3 {
+         font-size: 12px;
+    }
+    h3 > span {
+        color: rgb(123,127,162);
+    }
+
+    /**** Typography by synopsis ****/
+    div>p {
+        color: rgb(40,46,103);
+    }
+    .spanBold {
+        font-weight: bold;
+    }
+    .spanOpacity {
+        color: rgb(123,127,162);
+    }
+    .typotrailers, .typosynopsis {
+        font-size: 1em;
+    }
+    .typolist {
+        font-size: 0.9em;
+    }
+    .typolimenu {
+        font-size: 0.9em;
+    }
+    .txtJustify {
+        text-align: justify;
+    }
+
+    /**** BOUTONS ****/
+    div > span {
+        text-transform: uppercase;
+        color: rgb(84, 194,240);
+    }
+    .typonavheadersection {
+        text-transform: capitalize;
+        color: rgb( 40, 46, 103);
+        font-size: 1.1em;
+    }
+    #buttonmore {
+        border-radius: 15px;
+        border: solid 3px rgb(84, 194,240);
+    }
+    #buttonnext_page, .buttontrailer, .buttonadd, .buttonnavmoviehome,
+    .buttonnavtrailers, .buttonnavcasting, .buttonnavcritiques {
+        border: solid 3px rgb(40,46,103);
+    }
+    .TailleSpanPage {
+        font-size: 1.6em;
+    }
+
+    /**** ICONS ****/
+    #next_page {
+        width: 83%;
+        margin-left: 35%;
+    }
+    #add {
+        width: 35%;
+    }
+    .tailleeclair {
+        width: 50%;
+    }
+    .taillelike {
+        width: 50%;
+    }
+    .taillelikebroken {
+        width: 50%;
+    }
+    .taillecomment {
+        width: 50%;
+    }
+    .return_top_icon {
+        width: 30%;
+    }
+    .return-top_position {
+        bottom: 7vh;
+        right: -3vw;
+    }
+    #navmoviehome {
+        width: 62%;
+    }
+    #navtrailers {
+        width: 15%;
+    }
+    #navcasting {
+        width: 13%;
+    }
+    #navcritiques {
+        width: 21%;
+    }
+/**** END MAIN ****/
+
+/**** START FOOTER ****/
+footer {
+    /* height: 150px; */
+    height: 20vh;
+    background-color: rgb(40,46,103);
+}
+footer nav li {
+    border-radius: 50px;
+    background-color: white;
+}
+footer nav li a {
+    color: rgb(40,46,103);
+}
+footer nav li a:hover {
+    color: rgb(84, 194,240);
+}
+/**** END FOOTER ****/
+
+/**** Custom icon carousel ****/

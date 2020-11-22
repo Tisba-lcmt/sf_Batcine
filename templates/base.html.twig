@@ -38,7 +38,7 @@
 
         <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
         <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="asset/css/style.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
         <title>{% block title %}{% endblock title %}</title>
     </head>
     <body>
@@ -178,7 +178,7 @@
             <script src="{{'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'}}"
                     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
                     crossorigin="anonymous"></script>
-            <script type="text/javascript" src="asset/js/modele_film.js"></script>
+            <script type="text/javascript" src="{{ asset('assets/js/modele_film.js') }}"></script>
         {% endblock javascripts %}
     {# Fin du block javascripts #}
 
