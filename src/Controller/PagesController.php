@@ -4,9 +4,10 @@
 namespace App\Controller;
 
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
-class PagesController
+class PagesController extends AbstractController
 {
 
     /**
@@ -15,6 +16,6 @@ class PagesController
 
     public function home()
     {
-        dd("Homepage");
+       return $this->render('home.html.twig');
     }
 }

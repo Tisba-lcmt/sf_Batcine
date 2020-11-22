@@ -48,11 +48,11 @@
         {# Partie supérieure du header, la navigation et logo #}
         <nav class="container position-relative">
             <ul class="row justify-content-between py-lg-3">
-                <li class="col-lg-2 text-center typohead"><a href="index.html" class="active">Accueil</a></li>
+                <li class="col-lg-2 text-center typohead"><a href="{{ path('homepage') }}" class="active">Accueil</a></li>
                 <li class="col-lg-2 text-center typohead"><a href="actualites.html">Actualités</a></li>
                 <li class="cercle">
-                    <div id="circletransp"><a href="index.html">
-                            <img src="{{ 'asset/imasset(g/logos/logo_batcine_blanc.svg') }}"
+                    <div id="circletransp"><a href="{{ path('homepage') }}">
+                            <img src="{{ asset('assets/img/logo/logo_batcine_blanc.svg') }}"
                                  alt="Batcine Logo" title="Batcine Logo" class="img-fluid" id="logo"></a>
                     </div>
                 </li>
@@ -64,7 +64,7 @@
                 </li>
                 <li class="col-lg-2 text-center typohead"><a href="series.html">Séries</a></li>
                 <li class="col-lg-1 text-center typohead" id="login">
-                    <a href=""><img src=asset("{{ 'assset/img/icon/login.svg') }}" alt="Login" title="Login" class="img-fluid"></a>
+                    <a href=""><img src="{{ asset('assets/img/icon/login.svg') }}" alt="Login" title="Login" class="img-fluid"></a>
                 </li>
             </ul>
         </nav>
@@ -169,7 +169,7 @@
 
     {# Début du block javascripts #}
         {% block javascripts %}
-            <script src="{{ 'https://code.jquery.com/jquery-3.5.1.slim.min.js' }}"
+            <script src="{{'https://code.jquery.com/jquery-3.5.1.slim.min.js'}}"
                     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
                     crossorigin="anonymous"></script>
             <script src="{{'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js'}}"
