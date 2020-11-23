@@ -1,19 +1,20 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    Films
+    Films à l'affiche
 {% endblock title %}
 
 {% block main %}
 
 {# MAIN #}
 <main class="container-fluid position-relative">
-    {# FIL D'ARIANNE #}
+    <!-- FIL D'ARIANNE -->
     <div>
         <ul>
             <li class="breadcrumb">
                 <a href="{{ path('homepage') }}" class="item">Accueil</a>
                 <a href="{{ path('movies_list') }}" class="item">Films</a>
+                <a href="{{ path('currentMovies_list') }}" class="item">Films à l'affiche</a>
             </li>
         </ul>
     </div>
@@ -50,7 +51,36 @@
             </div>
         </div>
         {# Ligne 2 #}
-        <div class="row align-items-center justify-content-around my-lg-5">
+        <div class="row align-items-center justify-content-around mt-lg-5">
+            <div class="col-lg-3">
+               {# PREMIER FILM #}
+                <a href="modele_film.html">
+                    <img src="{{ asset('assets/img/films/affiches/antoinettes_dans_les_cevennes.jpg') }}"
+                         alt="Antoinettes dans les Cévennes" title="Antoinettes dans les Cévennes" class="img-fluid">
+                    <h2 class="mt-lg-3">Antoinette dans les Cévennes</h2>
+                    <h3>De :<span> Caroline Vignal</span></h3>
+                </a>
+            </div>
+            <div class="col-lg-3">
+                {# DEUXIEME FILM #}
+                <a href="modele_film.html">
+                    <img src="{{ asset('assets/img/films/affiches/mon_cousin.jpg') }}" alt="Mon cousin" title="Mon cousin"
+                         class="img-fluid">
+                    <h2 class="mt-lg-3">Mon Cousin</h2>
+                    <h3>De :<span> Jan Kounen</span></h3>
+                </a>
+            </div>
+            <div class="col-lg-3">
+                {# TROISIEME FILM #}
+                <a href="modele_film.html">
+                    <img src="{{ asset('assets/img/films/affiches/tenet.jpg') }}" alt="Tenet" title="Tenet" class="img-fluid">
+                    <h2 class="mt-lg-3">Tenet</h2>
+                    <h3>De :<span> Christopher Nolan</span></h3>
+                </a>
+            </div>
+        </div>
+        {# Ligne 3 #}
+        <div class="row align-items-center justify-content-around mt-lg-5">
             <div class="col-lg-3">
                 {# PREMIER FILM #}
                 <a href="modele_film.html">
@@ -78,97 +108,73 @@
                 </a>
             </div>
         </div>
-        {# BOUTON VOIR PLUS #}
-        <div class="row justify-content-end my-lg-5">
-            <div class="col-lg-2 my-lg-3" id="buttonmore">
-                <a href="{{ path('currentMovies_list') }}">
-                    <div class="row align-items-center justify-content-between">
-                        <span class="col-lg-3 text-center ml-lg-3 my-lg-2">Voir</span>
-                        <span class="col-lg-3 text-center ml-lg-0 p-0 my-lg-2"> plus</span>
-                        <div class="col-lg-4 my-lg-2">
-                            <img src="{{ asset('assets/img/icon/more.svg') }}" alt="Voir plus" title="Voir Plus" class="img-fluid">
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    {# SECTION FILMS PROCHAINEMENT #}
-    <section class="container">
-        <h1 class="text-center my-lg-5">Films Prochainement</h1>
-        {# Ligne 1 #}
-        <div class="row align-items-center justify-content-around">
+        {# Ligne 4 #}
+        <div class="row align-items-center justify-content-around mt-lg-5">
             <div class="col-lg-3">
                 {# PREMIER FILM #}
                 <a href="modele_film.html">
-                    <img src="{{ asset('assets/img/films/prochainement/mourir_peut_attendre.jpg') }}" alt="Mourir peut attendre"
-                         title="Mourir peut attendre" class="img-fluid">
-                    <h2 class="mt-lg-3">Mourir peut attendre</h2>
-                    <h3>De :<span> Cary Joji Fukunaga</span></h3>
+                    <img src="{{ asset('assets/img/films/affiches/antoinettes_dans_les_cevennes.jpg') }}"
+                         alt="Antoinettes dans les Cévennes" title="Antoinettes dans les Cévennes" class="img-fluid">
+                    <h2 class="mt-lg-3">Antoinette dans les Cévennes</h2>
+                    <h3>De :<span> Caroline Vignal</span></h3>
                 </a>
             </div>
             <div class="col-lg-3">
                 {# DEUXIEME FILM #}
                 <a href="modele_film.html">
-                    <img src="{{ asset('assets/img/films/prochainement/30_jours_max.jpg') }}" alt="30 jours max"
-                         title="30 jours max" class="img-fluid">
-                    <h2 class="mt-lg-3">30 jours max</h2>
-                    <h3>De :<span> Tarek Boudali</span></h3>
+                    <img src="{{ asset('assets/img/films/affiches/mon_cousin.jpg') }}" alt="Mon cousin" title="Mon cousin"
+                         class="img-fluid">
+                    <h2 class="mt-lg-3">Mon Cousin</h2>
+                    <h3>De :<span> Jan Kounen</span></h3>
                 </a>
             </div>
             <div class="col-lg-3">
                 {# TROISIEME FILM #}
                 <a href="modele_film.html">
-                    <img src="{{ asset('assets/img/films/prochainement/the_singing_club.jpg') }}" alt="The singing club"
-                         title="The singing club" class="img-fluid">
-                    <h2 class="mt-lg-3">The Singing Club</h2>
-                    <h3>De :<span> Peter Cattaneo</span></h3>
+                    <img src="{{ asset('assets/img/films/affiches/tenet.jpg') }}" alt="Tenet" title="Tenet" class="img-fluid">
+                    <h2 class="mt-lg-3">Tenet</h2>
+                    <h3>De :<span> Christopher Nolan</span></h3>
                 </a>
             </div>
         </div>
-        {# Ligne 2 #}
-        <div class="row align-items-center justify-content-around my-lg-5">
+        {# Ligne 5 #}
+        <div class="row align-items-center justify-content-around mt-lg-5">
             <div class="col-lg-3">
                 {# PREMIER FILM #}
                 <a href="modele_film.html">
-                    <img src="{{ asset('assets/img/films/prochainement/mourir_peut_attendre.jpg') }}" alt="Mourir peut attendre"
-                         title="Mourir peut attendre" class="img-fluid">
-                    <h2 class="mt-lg-3">Mourir peut attendre</h2>
-                    <h3>De :<span> Cary Joji Fukunaga</span></h3>
+                    <img src="{{ asset('assets/img/films/affiches/antoinettes_dans_les_cevennes.jpg') }}"
+                         alt="Antoinettes dans les Cévennes" title="Antoinettes dans les Cévennes" class="img-fluid">
+                    <h2 class="mt-lg-3">Antoinette dans les Cévennes</h2>
+                    <h3>De :<span> Caroline Vignal</span></h3>
                 </a>
             </div>
             <div class="col-lg-3">
                 {# DEUXIEME FILM #}
                 <a href="modele_film.html">
-                    <img src="{{ asset('assets/img/films/prochainement/30_jours_max.jpg') }}" alt="30 jours max"
-                         title="30 jours max" class="img-fluid">
-                    <h2 class="mt-lg-3">30 jours max</h2>
-                    <h3>De :<span> Tarek Boudali</span></h3>
+                    <img src="{{ asset('assets/img/films/affiches/mon_cousin.jpg') }}" alt="Mon cousin" title="Mon cousin"
+                         class="img-fluid">
+                    <h2 class="mt-lg-3">Mon Cousin</h2>
+                    <h3>De :<span> Jan Kounen</span></h3>
                 </a>
             </div>
             <div class="col-lg-3">
                 {# TROISIEME FILM #}
                 <a href="modele_film.html">
-                    <img src="{{ asset('assets/img/films/prochainement/the_singing_club.jpg') }}" alt="The singing club"
-                         title="The singing club" class="img-fluid">
-                    <h2 class="mt-lg-3">The Singing Club</h2>
-                    <h3>De :<span> Peter Cattaneo</span></h3>
+                    <img src="{{ asset('assets/img/films/affiches/tenet.jpg') }}" alt="Tenet" title="Tenet" class="img-fluid">
+                    <h2 class="mt-lg-3">Tenet</h2>
+                    <h3>De :<span> Christopher Nolan</span></h3>
                 </a>
             </div>
         </div>
-        {# BOUTON VOIR PLUS #}
-        <div class="row justify-content-end my-lg-5">
-            <div class="col-lg-2 my-lg-3" id="buttonmore">
-                <a href="prochainement.html">
-                    <div class="row align-items-center justify-content-between">
-                        <span class="col-lg-3 text-center ml-lg-3 my-lg-2">Voir</span>
-                        <span class="col-lg-3 text-center ml-lg-0 p-0 my-lg-2"> plus</span>
-                        <div class="col-lg-4 my-lg-2">
-                            {# ICON VOIR PLUS #}
-                            <img src="{{ asset('assets/img/icon/more.svg') }}" alt="Voir plus" title="Voir Plus" class="img-fluid">
-                        </div>
-                    </div>
-                </a>
+        {# BOUTON NEXT PAGE #}
+        <div class="row text-center justify-content-center align-items-center my-lg-5">
+            <div class="col-lg-2 py-lg-1" id="buttonnext_page">
+                <span class="text-center TailleSpanPage ">Page 1</span>
+            </div>
+            <div class="col-lg-1">
+                {# ICON NEXT PAGE #}
+                <img src="{{ asset('assets/img/icon/next_page_right.svg') }}" alt="Page 1" title="Page 1" class="img-fluid"
+                     id="next_page">
             </div>
         </div>
     </section>
@@ -178,5 +184,4 @@
         </div>
     </a>
 </main>
-
 {% endblock main %}

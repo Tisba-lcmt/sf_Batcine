@@ -24,7 +24,7 @@ class MoviesController extends AbstractController
 
     public function currentMoviesList()
     {
-        dd("Films actuels");
+        return $this->render('currentMovies.html.twig');
     }
 
     /**
