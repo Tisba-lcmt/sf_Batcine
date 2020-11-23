@@ -42,7 +42,7 @@ class MoviesController extends AbstractController
 
     public function upcomingMoviesList()
     {
-        dd("Les films à venir");
+        return $this->render('upcomingMovies.html.twig');
     }
 
     /**
