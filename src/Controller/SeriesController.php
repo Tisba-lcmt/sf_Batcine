@@ -16,7 +16,7 @@ class SeriesController extends AbstractController
 
     public function seriesList()
     {
-        dd("Liste de séries");
+        return $this->render('series.html.twig');
     }
 
     /**
