@@ -18,21 +18,4 @@ class MoviesController extends AbstractController
         return $this->render('movies.html.twig');
     }
 
-    /**
-     * @Route("/upcomingMoviesList", name="upcomingMovies_list")
-     */
-
-    public function upcomingMoviesList()
-    {
-        return $this->render('upcomingMovies.html.twig');
-    }
-
-    /**
-     * @Route("/upcomingMovieShow", name="upcomingMovie_show")
-     */
-
-    public function upcomingMovieShow()
-    {
-        dd("Mon film à venir");
-    }
 }
