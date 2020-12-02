@@ -34,6 +34,11 @@ class Staff
      */
     private $media;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=StaffType::class, inversedBy="staff")
+     */
+    private $staffType;
+
     public function __construct()
     {
         $this->media = new ArrayCollection();
@@ -91,6 +96,18 @@ class Staff
         if ($this->media->removeElement($medium)) {
             $medium->removeStaff($this);
         }
+
+        return $this;
+    }
+
+    public function getStaffType(): ?StaffType
+    {
+        return $this->staffType;
+    }
+
+    public function setStaffType(?StaffType $staffType): self
+    {
+        $this->staffType = $staffType;
 
         return $this;
     }
