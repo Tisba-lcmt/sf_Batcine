@@ -54,9 +54,15 @@ class Media
      */
     private $criticalOpinionsMedia;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=User::class, inversedBy="media")
+     */
+    private $user;
+
     public function __construct()
     {
         $this->criticalOpinionsMedia = new ArrayCollection();
+        $this->user = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -162,6 +168,30 @@ class Media
                 $criticalOpinionsMedium->setMedia(null);
             }
         }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|User[]
+     */
+    public function getUser(): Collection
+    {
+        return $this->user;
+    }
+
+    public function addUser(User $user): self
+    {
+        if (!$this->user->contains($user)) {
+            $this->user[] = $user;
+        }
+
+        return $this;
+    }
+
+    public function removeUser(User $user): self
+    {
+        $this->user->removeElement($user);
 
         return $this;
     }

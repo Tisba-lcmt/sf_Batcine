@@ -129,9 +129,15 @@ class User implements UserInterface
      */
     private $criticalOpinions;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Media::class, mappedBy="user")
+     */
+    private $media;
+
     public function __construct()
     {
         $this->criticalOpinions = new ArrayCollection();
+        $this->media = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -237,6 +243,33 @@ class User implements UserInterface
             if ($criticalOpinion->getUser() === $this) {
                 $criticalOpinion->setUser(null);
             }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Media[]
+     */
+    public function getMedia(): Collection
+    {
+        return $this->media;
+    }
+
+    public function addMedium(Media $medium): self
+    {
+        if (!$this->media->contains($medium)) {
+            $this->media[] = $medium;
+            $medium->addUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeMedium(Media $medium): self
+    {
+        if ($this->media->removeElement($medium)) {
+            $medium->removeUser($this);
         }
 
         return $this;
