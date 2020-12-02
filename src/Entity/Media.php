@@ -64,11 +64,17 @@ class Media
      */
     private $staff;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Genre::class, inversedBy="media")
+     */
+    private $genre;
+
     public function __construct()
     {
         $this->criticalOpinionsMedia = new ArrayCollection();
         $this->user = new ArrayCollection();
         $this->staff = new ArrayCollection();
+        $this->genre = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -222,6 +228,30 @@ class Media
     public function removeStaff(Staff $staff): self
     {
         $this->staff->removeElement($staff);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Genre[]
+     */
+    public function getGenre(): Collection
+    {
+        return $this->genre;
+    }
+
+    public function addGenre(Genre $genre): self
+    {
+        if (!$this->genre->contains($genre)) {
+            $this->genre[] = $genre;
+        }
+
+        return $this;
+    }
+
+    public function removeGenre(Genre $genre): self
+    {
+        $this->genre->removeElement($genre);
 
         return $this;
     }
