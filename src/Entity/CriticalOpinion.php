@@ -43,6 +43,12 @@ class CriticalOpinion
      */
     private $user;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Media::class, inversedBy="criticalOpinionsMedia")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $media;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -104,6 +110,18 @@ class CriticalOpinion
     public function setUser(?User $user): self
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    public function getMedia(): ?Media
+    {
+        return $this->media;
+    }
+
+    public function setMedia(?Media $media): self
+    {
+        $this->media = $media;
 
         return $this;
     }
