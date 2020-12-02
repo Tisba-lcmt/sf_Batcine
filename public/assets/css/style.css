@@ -1,63 +1,76 @@
-/**** GENERAL RULES ****/
+/**** GENERAL ****/
+
 * {
     margin: 0;
     padding: 0;
-}
-li {
-    list-style-type: none;
-}
-li>a {
-    color: rgb(84, 194,240);
-}
-li>a:hover, .active {
-    text-decoration: none;
-    color: rgb(40 , 46 , 103);
-}
-a:hover {
-    text-decoration: none;
+    box-sizing: border-box;
 }
 
-/**** START HEADER ****/
-.cercle{
-    position:absolute;
-    bottom:-50px;
-    left:50%;
-    z-index:1000;
-    transform: translateX(-50%);
-}
-#circletransp {
-     width: 100px;
-     height: 100px;
-     border-radius: 50%;
-     background-color: rgba(84, 194,240, 0.3);
-     position: relative;
-}
-#circletransp img{
-     position:absolute;
-     top:50%;
-     left:50%;
-     transform:translate(-50%,-50%);
-}
-#login {
-     height: 15%;
-}
-#login {
-    position: absolute;
-    right:-100px;
-    top:0;
-}
-header > nav{
-    height:10vh;
-    margin-top: 2vh;
-}
+    /** Liens globaux **/
+    li {
+        list-style-type: none;
+    }
+    li>a {
+        color: rgb(84, 194,240);
+    }
+    li>a:hover, header .active {
+        text-decoration: none;
+        color: rgb(40 , 46 , 103);
+    }
 
-    /**** Carousel ****/
+    /** Hover des infos Films **/
+    a:hover {
+        text-decoration: none;
+    }
+
+/**** HEADER ****/
+
+header>nav{
+    /* height: 10vh; */
+    height: 75px;
+    margin-top: 20px;
+}
+header>nav a {
+    font-size: 1.1em;
+}   
+    /** Navigation Position Logo **/
+    .cercle{
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        z-index: 1000;
+        transform: translateX(-50%);
+    }
+    #circletransp {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: rgba(84, 194,240, 0.3);
+    }
+    #circletransp img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 65%;
+    }
+    /** Navigation Icon Login **/
+    #login {
+        width: 15%;
+        position: absolute;
+        right: -12%;
+        top:0;
+    }
+
+    /** Carousel **/
     #top15filmfrfin2020{
-        height:88vh;
+        /* height:88vh; */
+        height:calc(720px - 75px);
         overflow: hidden;
     }
 
-    /**** Sub Menu ****/
+    /** Sous-Menu **/
     .sub {
         display: none;
     }
@@ -75,26 +88,28 @@ header > nav{
         display: block;
     }
 
-    /**** Z-index ****/
+    /** Z-index **/
     .z_menu {
         z-index: 900;
     }
-/**** END HEADER ****/
 
-/**** START MAIN ****/
-.background {
-    background-color: salmon;
-    height: 300px;
-    margin-top: 150px;
-}
-.trait {
-    background-color: rgb(84, 194,240);
-    border-radius: 25px;
-    height: 3px;
-    width: 700px;
-}
+/**** MAIN ****/
 
-    /**** Breadcrumb trail ****/
+    /** A voir par page **/
+    .background {
+        background-color: salmon;
+        height: 300px;
+        margin-top: 150px;
+    }
+    /** Ligne **/
+    .trait {
+        background-color: rgb(84, 194,240);
+        border-radius: 25px;
+        height: 3px;
+        width: 700px;
+    }
+
+    /** Fil d'Arianne **/
     .breadcrumb {
         background-color: white;
     }
@@ -110,28 +125,28 @@ header > nav{
         color: rgb(84, 194,240);
     }
 
-    /**** General Typography ****/
-    article > p {
+    /** TYPOGRAPHIE GENERALE **/
+    article>p {
         color: rgb(40,46,103);
     }
     .typohead, h1{
-         font-family:'Kalam', sans-serif;
-         text-transform: uppercase;
+        font-family:'Kalam', sans-serif;
+        text-transform: uppercase;
     }
     h1, h2, h3, li > span {
-         color: rgb(40,46,103);
+        color: rgb(40,46,103);
     }
     h2 {
-         font-size: 16px;
+        font-size: 16px;
     }
     h3 {
-         font-size: 12px;
+        font-size: 12px;
     }
-    h3 > span {
+    h3>span {
         color: rgb(123,127,162);
     }
 
-    /**** Typography by synopsis ****/
+    /** Typographie par Synopsis **/
     div>p {
         color: rgb(40,46,103);
     }
@@ -145,7 +160,7 @@ header > nav{
         font-size: 1em;
     }
     .typolist {
-        font-size: 0.9em;
+        font-size: 0.9em; 
     }
     .typolimenu {
         font-size: 0.9em;
@@ -154,8 +169,8 @@ header > nav{
         text-align: justify;
     }
 
-    /**** BOUTONS ****/
-    div > span {
+    /** BOUTONS **/
+    div>span {
         text-transform: uppercase;
         color: rgb(84, 194,240);
     }
@@ -164,19 +179,32 @@ header > nav{
         color: rgb( 40, 46, 103);
         font-size: 1.1em;
     }
-    #buttonmore {
-        border-radius: 15px;
-        border: solid 3px rgb(84, 194,240);
-    }
-    #buttonnext_page, .buttontrailer, .buttonadd, .buttonnavmoviehome,
+
+    #buttonnext_page, .buttontrailer, .buttonadd, .buttonnavmoviehome, 
     .buttonnavtrailers, .buttonnavcasting, .buttonnavcritiques {
         border: solid 3px rgb(40,46,103);
     }
-    .TailleSpanPage {
-        font-size: 1.6em;
-    }
 
-    /**** ICONS ****/
+        /** Bouton Voir Plus **/
+        .buttonmore {
+            border-radius: 15px;
+            border: solid 3px rgb(84, 194,240);
+        }
+
+        /** BOUTON Next Page **/
+        .TailleSpanPage {
+            font-size: 1.6em;
+        }
+
+        /** RETURN TOP **/
+        .returnTopPosition {
+            width: 3%;
+            position: fixed;
+            bottom: 7%;
+            right: 4%;
+        }
+
+    /** ICONS **/
     #next_page {
         width: 83%;
         margin-left: 35%;
@@ -196,13 +224,6 @@ header > nav{
     .taillecomment {
         width: 50%;
     }
-    .return_top_icon {
-        width: 30%;
-    }
-    .return-top_position {
-        bottom: 7vh;
-        right: -3vw;
-    }
     #navmoviehome {
         width: 62%;
     }
@@ -213,26 +234,404 @@ header > nav{
         width: 13%;
     }
     #navcritiques {
-        width: 21%;
+        width: 21%;    
     }
-/**** END MAIN ****/
 
-/**** START FOOTER ****/
-footer {
-    /* height: 150px; */
-    height: 20vh;
-    background-color: rgb(40,46,103);
-}
-footer nav li {
-    border-radius: 50px;
-    background-color: white;
-}
-footer nav li a {
-    color: rgb(40,46,103);
-}
-footer nav li a:hover {
-    color: rgb(84, 194,240);
-}
-/**** END FOOTER ****/
+/** Section Nom du Film **/
 
-/**** Custom icon carousel ****/
+#m117 {
+    border: rebeccapurple 2px solid;
+    background-color: rebeccapurple;        
+}    
+
+#m118 {
+    border: orange 2px solid;
+    background-color: orange;    
+}
+
+#m119 {
+    border: red 2px solid;
+    background-color: red;
+}
+
+#m120 {
+    border: lightgreen 2px solid;
+    background-color: lightgreen;
+}
+
+#m121 {
+    border: lightsalmon 2px solid;
+    background-color: lightsalmon;
+}
+
+#m122 {
+    border: lightslategray 2px solid;
+    background-color: lightslategray;
+}
+
+#m123 {
+    border: lightyellow 2px solid;
+    background-color: lightyellow;
+}
+
+#m124 {
+    border: lightpink 2px solid;
+    background-color: lightpink;
+}
+
+#m125 {
+    border: lightseagreen 2px solid;
+    background-color: lightseagreen;
+}
+
+#m126 {
+    border: lightsteelblue 2px solid;
+    background-color: lightsteelblue;
+}
+
+/**** FOOTER ****/
+    #footer {
+        height: 150px;
+        background-color: rgb(40,46,103);
+    }
+    #footer nav li {
+        border-radius: 50px;
+        background-color: white;
+    }
+    #footer nav li a {
+        color: rgb(40,46,103);
+    }
+    #footer nav li a:hover {
+        color: rgb(84, 194,240);
+    }
+
+    /** NAVBAR STICKY MENU **/
+
+    .navbarStickyMenu {
+        display: none;
+    }    
+
+/**** CUSTOM ICON CAROUSEL ****/
+
+/**** Media Queries ****/
+
+    /*** Medium screens ***/
+
+    @media screen and (max-width: 768px) {
+        
+    }
+
+    /*** Small screens ***/
+    
+    @media screen and (max-width: 576px) {
+
+        /**** HEADER ****/
+        
+        header>nav {
+            height: 90px;
+            margin: 0;
+        }
+        
+        /** Navigation Position Logo **/
+
+        .cercle{
+            bottom: 0;
+            top: 0;
+        }
+        #circletransp {
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        /** Navigation Icon Login **/
+
+        #login {
+            right: 15px;
+            width: 18%;
+            height: auto;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /** Carousel **/
+
+        header>#top15filmfrfin2020 {
+            height: 250px;
+        }
+
+        /**** Main ****/
+
+            /** Fil d'Arianne **/
+
+            .breadcrumb {
+                padding: 6px 0 6px 0;
+                margin-bottom: 0;
+            }
+
+            .breadcrumb>a {
+                font-size: 0.93em;
+            }
+
+        /** Section Actualités **/
+
+            /** Typo Titre Section **/
+
+            #actualites>h1 {
+                font-size: 1.6em;
+                margin-bottom: 0;
+            }
+
+        /** Section Films Affiche **/
+
+            /** Typo Titre Section **/
+
+            #filmsAffiche>h1 {
+                font-size: 1.6em;
+                margin-bottom: 0;
+            }
+
+            #filmsAffiche h2, #filmsAffiche h3 {
+                text-align: center;
+            }
+
+            /** Typo Titre Affiche **/
+
+            #filmsAffiche h2 {
+                font-size: .8em;
+                font-weight: bold;
+            }
+            #filmsAffiche h3 {
+                font-size: .65em;
+            }
+
+        /** Section Films Prochainement **/
+
+            /** Typo Titre Section **/
+
+            #filmsProchainement>h1 {
+                font-size: 1.6em;
+                margin-bottom: 0;
+            }
+
+            #filmsProchainement h2, #filmsProchainement h3 {
+                text-align: center;
+            }
+
+            /** Typo Titre Affiche **/
+
+            #filmsProchainement h2 {
+                font-size: .8em;
+                font-weight: bold;
+            }
+            #filmsProchainement h3 {
+                font-size: .65em;
+            }
+
+        /** Section Nouvelles Séries **/
+
+            /** Typo Titre Section **/
+            #series>h1 {
+                font-size: 1.6em;
+                margin-bottom: 0;
+            }
+
+            #series h2, #series h3 {
+                text-align: center;
+            }
+
+            /** Typo Titre Affiche **/
+            #series h2 {
+                font-size: .8em;
+                font-weight: bold;
+            }
+            #series h3 {
+                font-size: .65em;
+            }
+
+        /** Bouton Voir Plus **/
+        .buttonmore {
+            display: block;
+            border-radius: 16px;
+            margin: 0 auto;
+        }
+
+        /** Icons **/
+        .returnTopPosition {
+            position: absolute;
+            width: 7%;
+            bottom: -.7%;
+            right: 7%;
+        }
+
+        #next_page {
+            width: 55%;
+            margin-left: 20%;
+        }
+
+        /** Section Nom du Film **/
+
+        #m117 {
+            border: rebeccapurple 2px solid;
+            background-color: rebeccapurple;        
+        }    
+
+        #m118 {
+            border: orange 2px solid;
+            background-color: orange;    
+        }
+
+        #m119 {
+            border: red 2px solid;
+            background-color: red;
+        }
+
+        #m120 {
+            border: lightgreen 2px solid;
+            background-color: lightgreen;
+        }
+
+        #m121 {
+            border: lightsalmon 2px solid;
+            font-size: 1.6em;
+            background-color: lightsalmon;
+        }
+
+        #m122 {
+            border: lightslategray 2px solid;
+            background-color: lightslategray;
+        }
+
+        #m123 {
+            border: lightyellow 2px solid;
+            background-color: lightyellow;
+        }
+
+        #m124 {
+            border: lightpink 2px solid;
+            background-color: lightpink;
+        }
+
+        #m125 {
+            border: lightseagreen 2px solid;
+            background-color: lightseagreen;
+        }
+
+        #m126 {
+            border: lightsteelblue 2px solid;
+            background-color: lightsteelblue;
+        }
+
+        #infosFilms>p {
+            font-size: .620em;
+        }
+
+        #infosFilms2>p {
+            font-size: .70em;
+        }
+
+        .buttontrailer, .buttonadd {
+            border: solid 2px rgb(40,46,103);
+        }
+
+        .buttontrailer>.typotrailers {
+            font-size: .85em;
+            text-transform: initial;
+        }
+
+        .buttonadd>.typolist{
+            font-size: .85em;
+            text-transform: initial;
+        }
+
+        #add {
+            width: 36%;
+        }
+
+        /** Ligne **/
+        .trait {
+            border-radius: 25px;
+            height: 3px;
+            width: 260px;
+        }
+
+        .buttontrailer>.typosynopsis {
+            font-size: .85em;
+            text-transform: initial;
+        }
+
+        /** ICONS **/
+
+        .tailleeclair {
+            width: 5%;
+        }
+        .taillelike {
+            width: 5%;
+        }
+        .taillelikebroken {
+            width: 5%;
+        }
+        .taillecomment {
+            width: 5%;
+        }
+
+        #iconsInfosFilms {
+            background-color: khaki;
+            display: flex;
+        }
+
+        /**** Footer ****/
+         #footer {
+             display: none;
+         }
+
+            /** NAVBAR STICKY MENU **/
+            footer {
+                position: sticky;
+                bottom: 0;
+            }
+
+            .navbarStickyMenu {
+                display: block;
+                width: 100%;
+                border-top: white 3px solid;
+                border-bottom: rgb(40,46,103) 3px solid;
+                background-color: rgb(40,46,103);
+            }
+            .navbarStickyMenu>.navList {
+                height: 75px;
+                margin: 0;
+                padding: 5px 0;
+                display: flex;
+                justify-content: space-around;
+            }
+            .navbarStickyMenu li {
+                width: 20%;
+                height: 100%;
+                text-align: center;
+                font-family:'Kalam', sans-serif;
+                text-transform: uppercase;
+                font-size: 1em;
+                background-color: rgb(40,46,103);
+            }
+            .navList .navIcons {
+                width: 36%;
+                height: 70%;
+                padding-top: 7px;
+                margin: auto auto 3px auto;
+            }
+            .navList #navIcons3 {
+                padding-top: 3px;
+            }
+            .navbarStickyMenu a:hover {
+                color: white;
+            }
+            .navbarStickyMenu .active {
+                text-decoration: none;
+                color: white;
+            }
+    }   
+    

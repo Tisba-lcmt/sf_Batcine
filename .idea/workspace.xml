@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0f6e2f55-ff5b-4710-8672-ece12f24ff12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CurrentMoviesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/front/CurrentMoviesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MoviesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/front/MoviesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/front/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/front/PagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SeriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/front/SeriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UpcomingMoviesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/front/UpcomingMoviesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +171,7 @@
       <workItem from="1606753566523" duration="20000" />
       <workItem from="1606827745397" duration="862000" />
       <workItem from="1606841164631" duration="1749000" />
-      <workItem from="1606895270295" duration="5564000" />
+      <workItem from="1606895270295" duration="7920000" />
     </task>
     <servers />
   </component>
@@ -196,6 +191,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="276" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606903100488" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1606905185127">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1606905185127" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1606120394795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
