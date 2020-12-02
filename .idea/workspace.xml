@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f6e2f55-ff5b-4710-8672-ece12f24ff12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/admin/AdminPagesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/home.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/admin/AdminNewsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/news.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,7 +172,7 @@
       <workItem from="1606753566523" duration="20000" />
       <workItem from="1606827745397" duration="862000" />
       <workItem from="1606841164631" duration="1749000" />
-      <workItem from="1606895270295" duration="22539000" />
+      <workItem from="1606895270295" duration="23127000" />
     </task>
     <servers />
   </component>
@@ -189,10 +188,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606149737348" />
-    <state x="577" y="106" key="NewPhpClassDialog" timestamp="1606923456317">
+    <state x="577" y="106" key="NewPhpClassDialog" timestamp="1606924546817">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="577" y="106" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1606923456317" />
+    <state x="577" y="106" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1606924546817" />
     <state x="276" y="0" key="SettingsEditor" timestamp="1606903100488">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -201,9 +200,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1606905185127" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1606120394795">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1606924603397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1606120394795" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1606924603397" />
   </component>
 </project>
