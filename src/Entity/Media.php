@@ -40,7 +40,7 @@ class Media
     private $nationality;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text")
      */
     private $synopsis;
 
@@ -59,10 +59,16 @@ class Media
      */
     private $user;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Staff::class, inversedBy="media")
+     */
+    private $staff;
+
     public function __construct()
     {
         $this->criticalOpinionsMedia = new ArrayCollection();
         $this->user = new ArrayCollection();
+        $this->staff = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -192,6 +198,30 @@ class Media
     public function removeUser(User $user): self
     {
         $this->user->removeElement($user);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Staff[]
+     */
+    public function getStaff(): Collection
+    {
+        return $this->staff;
+    }
+
+    public function addStaff(Staff $staff): self
+    {
+        if (!$this->staff->contains($staff)) {
+            $this->staff[] = $staff;
+        }
+
+        return $this;
+    }
+
+    public function removeStaff(Staff $staff): self
+    {
+        $this->staff->removeElement($staff);
 
         return $this;
     }
