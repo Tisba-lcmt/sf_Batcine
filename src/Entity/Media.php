@@ -69,6 +69,12 @@ class Media
      */
     private $genre;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="media")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $category;
+
     public function __construct()
     {
         $this->criticalOpinionsMedia = new ArrayCollection();
@@ -252,6 +258,18 @@ class Media
     public function removeGenre(Genre $genre): self
     {
         $this->genre->removeElement($genre);
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }
