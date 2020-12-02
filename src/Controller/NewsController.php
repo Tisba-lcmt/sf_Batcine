@@ -15,7 +15,7 @@ class NewsController extends AbstractController
 
     public function newsList()
     {
-        return $this->render('news.html.twig');
+        return $this->render('front/news.html.twig');
     }
 
     /**

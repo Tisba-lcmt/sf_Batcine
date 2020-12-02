@@ -15,7 +15,7 @@ class UpcomingMoviesController extends AbstractController
 
     public function upcomingMoviesList()
     {
-        return $this->render('upcomingMovies.html.twig');
+        return $this->render('front/upcomingMovies.html.twig');
     }
 
     /**

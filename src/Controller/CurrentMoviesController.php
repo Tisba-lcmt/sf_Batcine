@@ -15,7 +15,7 @@ class CurrentMoviesController extends AbstractController
 
     public function currentMoviesList()
     {
-        return $this->render('currentMovies.html.twig');
+        return $this->render('front/currentMovies.html.twig');
     }
 
     /**
@@ -24,7 +24,7 @@ class CurrentMoviesController extends AbstractController
 
     public function currentMovieShow()
     {
-        return $this->render('movie.html.twig');
+        return $this->render('front/movie.html.twig');
     }
 
 }

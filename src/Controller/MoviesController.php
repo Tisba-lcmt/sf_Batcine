@@ -15,7 +15,7 @@ class MoviesController extends AbstractController
 
     public function moviesList()
     {
-        return $this->render('movies.html.twig');
+        return $this->render('front/movies.html.twig');
     }
 
 }
