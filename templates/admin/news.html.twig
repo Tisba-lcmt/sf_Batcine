@@ -1,1 +1,19 @@
-<h1>CRUD News</h1>
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}AdminActualités{% endblock title %}
+
+{% block main %}
+<main>
+    <h1>CRUD News</h1>
+
+    <a href="">
+        <button>Créer une actualité</button>
+    </a>
+    <a href="">
+        <button>Modifier une actualité</button>
+    </a>
+    <a href="">
+        <button>Supprimer une actualité</button>
+    </a>
+</main>
+{% endblock main %}

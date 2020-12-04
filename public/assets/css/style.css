@@ -23,6 +23,61 @@
         text-decoration: none;
     }
 
+
+
+/**** ADMINISTRATEUR ****/
+
+.baseAdmin>header {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.baseAdmin>header nav {
+    background-color: grey;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.baseAdmin>header ul {
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.baseAdmin>header a {
+    text-decoration: none;
+    color: #002752;
+}
+
+.baseAdmin>main h1 {
+    font-family: Arial;
+    text-align: center;
+    font-size: 32px;
+    color: black;
+    margin: 50px 0;
+}
+
+.baseAdmin>main a {
+    width: 33.33%;
+    display: block;
+    margin: 25px auto;
+}
+.baseAdmin>main button {
+    width: 100%;
+}
+
+.baseAdmin>footer {
+    background-color: #5eb5e0;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
 /**** HEADER ****/
 
 header>nav{
@@ -309,9 +364,11 @@ header>nav a {
 
     .navbarStickyMenu {
         display: none;
-    }    
+    }
 
 /**** CUSTOM ICON CAROUSEL ****/
+
+
 
 /**** Media Queries ****/
 
