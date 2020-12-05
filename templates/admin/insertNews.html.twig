@@ -1,1 +1,46 @@
-<h1>Insert News</h1>
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}AdminActualités{% endblock title %}
+
+{% block main %}
+    <main class="form">
+        <h1>Insert News</h1>
+        {{ form_start(formView) }}
+        <div class="centrer">
+            <div></div>
+            {{ form_label(formView.title) }}
+            {{ form_widget(formView.title, {'attr': {'class': 'title'}}) }}
+            <div class="errorStyle">{{ form_errors(formView.title) }}</div>
+            <div></div>
+            {{ form_label(formView.content, 'Content', {'label_attr': {'class': 'contentTitle'}}) }}
+            {{ form_widget(formView.content, {'attr': {'class': 'content'}}) }}
+            <div class="errorStyle">{{ form_errors(formView.content) }}</div>
+            <div></div>
+            {{ form_label(formView.image) }}
+            {{ form_widget(formView.image, {'attr': {'class': 'image'}}) }}
+            <div class="errorStyle">{{ form_errors(formView.image) }}</div>
+            <div class="date">
+                <div>
+                    <div></div>
+                    {{ form_label(formView.creationDate) }}
+                    {{ form_widget(formView.creationDate, {'attr': {'class': 'creationDate'}}) }}
+                    <div class="errorStyle">{{ form_errors(formView.creationDate) }}</div>
+                </div>
+                <div>
+                    <div></div>
+                    {{ form_label(formView.publicationDate) }}
+                    {{ form_widget(formView.publicationDate, {'attr': {'class': 'publicationDate'}}) }}
+                    <div class="errorStyle">{{ form_errors(formView.publicationDate) }}</div>
+                </div>
+            </div>
+            <div></div>
+            {{ form_label(formView.isPublished) }}
+            {{ form_widget(formView.isPublished, {'attr': {'class': 'isPublished'}}) }}
+            <div class="errorStyle">{{ form_errors(formView.isPublished) }}</div>
+        </div>
+        <div></div>
+        {{ form_label(formView.Envoyer) }}
+        {{ form_widget(formView.Envoyer, {'attr': {'class': 'Envoyer'}}) }}
+        {{ form_end(formView) }}
+    </main>
+{% endblock main %}

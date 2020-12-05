@@ -14,8 +14,8 @@
 <header>
     <nav>
         <ul>
-            <li><a href="">Accueil</a></li>
-            <li><a href="">Actualités</a></li>
+            <li><a href="{{ path('admin_homepage') }}">Accueil</a></li>
+            <li><a href="{{ path('admin_news_list') }}">Actualités</a></li>
             {% if app.user %}
                 <li><a href="">Déconnexion</a></li>
             {% else %}
