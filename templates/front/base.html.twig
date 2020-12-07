@@ -2,181 +2,245 @@
 <!DOCTYPE html>
 {# Le langage du texte dans le document #}
 <html lang="fr">
-    <head>
-        {# Universal Character Set Transformation Format 8 bits : répertoire universel de caractères codés : Norme ISO/CEI 10646 #}
-        <meta charset="UTF-8">
-        {# Contrôler la mise en page de la fenêtre d'affichage du navigateur sur différents appareils  #}
-        <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-        {# La page sera afficheée avec la version IE mode edge cad le mode le plus élevé disponible #}
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="author" content="Baptiste Lucmaret">
-        <meta name="description" content="Site d'actualités de cinéma, films et séries à l'affiche et à voir prochainement">
-        <meta name="keywords" content="actualité, film, series, cinema">
-        <meta name="robots" content="index, follow">
+<head>
+    {# Universal Character Set Transformation Format 8 bits : répertoire universel de caractères codés :
+    Norme ISO/CEI 10646 #}
+    <meta charset="UTF-8">
+    {# Contrôler la mise en page de la fenêtre d'affichage du navigateur sur différents appareils  #}
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    {# La page sera afficheée avec la version IE mode edge cad le mode le plus élevé disponible #}
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Baptiste Lucmaret">
+    <meta name="description" content="Site d'actualités de cinéma, films et séries à l'affiche et à voir prochainement">
+    <meta name="keywords" content="Actualités, Films, Séries, Cinema">
+    <meta name="robots" content="index, follow">
 
-        {# Début du favicon #}
-        <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('assets/favicon/apple-icon-57x57.png') }}">
-        <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('assets/favicon/apple-icon-60x60.png') }}">
-        <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('assets/favicon/apple-icon-72x72.png') }}">
-        <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('assets/favicon/apple-icon-76x76.png') }}">
-        <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('assets/favicon/apple-icon-114x114.png') }}">
-        <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('assets/favicon/apple-icon-120x120.png') }}">
-        <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/favicon/apple-icon-144x144.png') }}">
-        <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('assets/favicon/apple-icon-152x152.png') }}">
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-icon-180x180.png') }}">
-        <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('assets/favicon/android-icon-192x192.png') }}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/favicon/favicon-32x32.png') }}">
-        <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('assets/favicon/favicon-96x96.png') }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon/favicon-16x16.png') }}">
-        <link rel="manifest" href="{{ asset('assets/favicon/manifest.json') }}">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
-        {# Fin du favicon #}
+    {# Début du favicon #}
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('assets/favicon/apple-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('assets/favicon/apple-icon-60x60.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('assets/favicon/apple-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('assets/favicon/apple-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('assets/favicon/apple-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('assets/favicon/apple-icon-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/favicon/apple-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('assets/favicon/apple-icon-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-icon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('assets/favicon/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('assets/favicon/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('assets/favicon/manifest.json') }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    {# Fin du favicon #}
 
-        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
-        <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
-        <title>{% block title %}{% endblock title %}</title>
-    </head>
-    <body>
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+    <title>{% block title %}{% endblock title %}</title>
+</head>
 
-    {# Début du header #}
-    <header class="container-fluid ">
-        {# Partie supérieure du header, la navigation et logo #}
-        <nav class="container position-relative">
-            <ul class="row justify-content-between py-lg-3">
-                <li class="col-lg-2 text-center typohead"><a href="{{ path('homepage') }}" class="active">Accueil</a></li>
-                <li class="col-lg-2 text-center typohead"><a href="{{ path('news_list') }}">Actualités</a></li>
-                <li class="cercle">
-                    <div id="circletransp"><a href="{{ path('homepage') }}">
-                            <img src="{{ asset('assets/img/logo/logo_batcine_blanc.svg') }}"
-                                 alt="Batcine Logo" title="Batcine Logo" class="img-fluid" id="logo"></a>
-                    </div>
-                </li>
-                <li class="col-lg-2 text-center typohead menu z_menu"><a href="{{ path('movies_list') }}">Films</a>
-                    <ul class="sub my-lg-5">
-                        <li class="sub1 px-lg-3 pt-lg-3 pb-lg-1"><a href="{{ path('currentMovies_list') }}" class="typolimenu">Film à l'affiche</a></li>
-                        <li class="sub2 pb-lg-3"><a href="{{ path('upcomingMovies_list') }}" class="typolimenu">Prochainement</a></li>
-                    </ul>
-                </li>
-                <li class="col-lg-2 text-center typohead"><a href="{{ path('series_list') }}">Séries</a></li>
-                <li class="col-lg-1 text-center typohead" id="login">
-                    <a href=""><img src="{{ asset('assets/img/icon/login.svg') }}" alt="Login" title="Login" class="img-fluid"></a>
-                </li>
-            </ul>
-        </nav>
-        {# Partie du carousel #}
-        <div id="top15filmfrfin2020" class="carousel slide carousel-fade" data-ride="carousel">
-            {# 15 films fr les plus attendus en fin d'année 2020 #}
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    {# Film 1 #}
-                    <img src="{{ asset('assets/img/carousel/adieu_les_cons.jpg') }}" class="d-block w-100" alt="Adieu les cons"
-                         title="Adieu les cons">
+<body>
+
+{# Slider JS #}
+<div class="slider hidden d-sm-none">
+    <h1>test</h1>
+</div>
+
+{# Début HEADER #}
+<header class="container-fluid p-0">
+
+    {# Partie supérieure du header, la navigation et logo #}
+    <nav class="container position-relative">
+        <ul class="row justify-content-between py-lg-3">
+            <li class="d-none text-center typohead col-lg-2 d-lg-block">
+                <a href="{{ path('homepage') }}" class="active">Accueil</a>
+            </li>
+            <li class="d-none text-center typohead col-lg-2 d-lg-block">
+                <a href="{{ path('news_list') }}">Actualités</a>
+            </li>
+            <li class="cercle">
+                <div id="circletransp">
+                    <a href="{{ path('homepage') }}">
+                        <img src="{{ asset('assets/img/logo/logo_batcine_blanc.svg') }}"
+                             alt="Batcine Logo" title="Batcine Logo"
+                             class="img-fluid" id="logo">
+                    </a>
                 </div>
-                <div class="carousel-item">
-                    {# Film 2 #}
-                    <img src="{{ asset('assets/img/carousel/l_origine_du_monde.jpg') }}" class="d-block w-100" alt="L'origine du monde"
-                         title="L'origine du monde">
-                </div>
-                <div class="carousel-item">
-                    {# Film 3 #}
-                    <img src="{{ asset('assets/img/carousel/slalom.jpg') }}" class="d-block w-100" alt="Slalom" title="Slalom">
-                </div>
-                <div class="carousel-item">
-                    {# Film 4 #}
-                    <img src="{{ asset('assets/img/carousel/la_nuee.jpg') }}" class="d-block w-100" alt="La nuée" title="La nuée">
-                </div>
-                <div class="carousel-item">
-                    {# Film 5 #}
-                    <img src="{{ asset('assets/img/carousel/aline.jpg') }}" class="d-block w-100" alt="Aline" title="Aline">
-                </div>
-                <div class="carousel-item">
-                    {# Film 6 #}
-                    <img src="{{ asset('assets/img/carousel/gagarine.jpg') }}" class="d-block w-100" alt="Gagarine" title="Gagarine">
-                </div>
-                <div class="carousel-item">
-                    {# Film 7 #}
-                    <img src="{{ asset('assets/img/carousel/kaamelott.jpg') }}" class="d-block w-100" alt="Kaamelott" title="Kaamelott">
-                </div>
-                <div class="carousel-item">
-                    {# Film 8 #}
-                    <img src="{{ asset('assets/img/carousel/5eme_set.jpg') }}" class="d-block w-100" alt="5ème set" title="5ème set">
-                </div>
-                <div class="carousel-item">
-                    {# Film 9 #}
-                    <img src="{{ asset('assets/img/carousel/mandibules.jpg') }}" class="d-block w-100" alt="Mandibules" title="Mandibules">
-                </div>
-                <div class="carousel-item">
-                    {# Film 10 #}
-                    <img src="{{ asset('assets/img/carousel/les_deux_alfred.jpg') }}" class="d-block w-100" alt="Les deux alfred"
-                         title="Les deux alfred">
-                </div>
-                <div class="carousel-item">
-                    {# Film 11 #}
-                    <img src="{{ asset('assets/img/carousel/amants.jpg') }}" class="d-block w-100" alt="Amants" title="Amants">
-                </div>
-                <div class="carousel-item">
-                    {# Film 12 #}
-                    <img src="{{ asset('assets/img/carousel/le_discours.jpg') }}" class="d-block w-100" alt="Le discours" title="Le discours">
-                </div>
-                <div class="carousel-item">
-                    {# Film 13 #}
-                    <img src="{{ asset('assets/img/carousel/comment_je_suis_devenu_super-heros.jpg') }}" class="d-block w-100"
-                         alt="Comment je suis devenu super-héros" title="Comment je suis devenu super-héros">
-                </div>
-                <div class="carousel-item">
-                    {# Film 14 #}
-                    <img src="{{ asset('assets/img/carousel/bac_nord.jpg') }}" class="d-block w-100" alt="Bac nord" title="Bac nord">
-                </div>
-                <div class="carousel-item">
-                    {# Film 15 #}
-                    <img src="{{ asset('assets/img/carousel/un_triomphe.jpg') }}" class="d-block w-100" alt="Un triomphe" title="Un triomphe">
-                </div>
+            </li>
+            <li class="d-none text-center typohead menu z_menu col-lg-2 d-lg-block">
+                <a href="{{ path('movies_list') }}">Films</a>
+                <ul class="sub my-lg-5">
+                    <li class="sub1 px-lg-3 pt-lg-3 pb-lg-1">
+                        <a href="{{ path('currentMovies_list') }}" class="typolimenu">Film à l'affiche</a>
+                    </li>
+                    <li class="sub2 pb-lg-3">
+                        <a href="{{ path('upcomingMovies_list') }}" class="typolimenu">Prochainement</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="d-none text-center typohead col-lg-2 d-lg-block">
+                <a href="{{ path('series_list') }}">Séries</a>
+            </li>
+            <li class="text-center typohead col-lg-1" id="login">
+                <a href="">
+                    <img src="{{ asset('assets/img/icon/login.svg') }}" alt="Login" title="Login" class="img-fluid">
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    {# Début Carousel #}
+    <div id="top15filmfrfin2020" class="carousel slide carousel-fade" data-ride="carousel">
+        {# 15 films fr les plus attendus en fin d'année 2020 #}
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                {# Film 1 #}
+                <img src="{{ asset('assets/img/carousel/adieu_les_cons.jpg') }}" class="d-block w-100"
+                     alt="Adieu les cons" title="Adieu les cons">
             </div>
-            <a class="carousel-control-prev" href="#top15filmfrfin2020" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#top15filmfrfin2020" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <div class="carousel-item">
+                {# Film 2 #}
+                <img src="{{ asset('assets/img/carousel/l_origine_du_monde.jpg') }}" class="d-block w-100"
+                     alt="L'origine du monde" title="L'origine du monde">
+            </div>
+            <div class="carousel-item">
+                {# Film 3 #}
+                <img src="{{ asset('assets/img/carousel/slalom.jpg') }}" class="d-block w-100"
+                     alt="Slalom" title="Slalom">
+            </div>
+            <div class="carousel-item">
+                {# Film 4 #}
+                <img src="{{ asset('assets/img/carousel/la_nuee.jpg') }}" class="d-block w-100"
+                     alt="La nuée" title="La nuée">
+            </div>
+            <div class="carousel-item">
+                {# Film 5 #}
+                <img src="{{ asset('assets/img/carousel/aline.jpg') }}" class="d-block w-100"
+                     alt="Aline" title="Aline">
+            </div>
+            <div class="carousel-item">
+                {# Film 6 #}
+                <img src="{{ asset('assets/img/carousel/gagarine.jpg') }}" class="d-block w-100"
+                     alt="Gagarine" title="Gagarine">
+            </div>
+            <div class="carousel-item">
+                {# Film 7 #}
+                <img src="{{ asset('assets/img/carousel/kaamelott.jpg') }}" class="d-block w-100"
+                     alt="Kaamelott" title="Kaamelott">
+            </div>
+            <div class="carousel-item">
+                {# Film 8 #}
+                <img src="{{ asset('assets/img/carousel/5eme_set.jpg') }}" class="d-block w-100"
+                     alt="5ème set" title="5ème set">
+            </div>
+            <div class="carousel-item">
+                {# Film 9 #}
+                <img src="{{ asset('assets/img/carousel/mandibules.jpg') }}" class="d-block w-100"
+                     alt="Mandibules" title="Mandibules">
+            </div>
+            <div class="carousel-item">
+                {# Film 10 #}
+                <img src="{{ asset('assets/img/carousel/les_deux_alfred.jpg') }}" class="d-block w-100"
+                     alt="Les deux alfred" title="Les deux alfred">
+            </div>
+            <div class="carousel-item">
+                {# Film 11 #}
+                <img src="{{ asset('assets/img/carousel/amants.jpg') }}" class="d-block w-100"
+                     alt="Amants" title="Amants">
+            </div>
+            <div class="carousel-item">
+                {# Film 12 #}
+                <img src="{{ asset('assets/img/carousel/le_discours.jpg') }}" class="d-block w-100"
+                     alt="Le discours" title="Le discours">
+            </div>
+            <div class="carousel-item">
+                {# Film 13 #}
+                <img src="{{ asset('assets/img/carousel/comment_je_suis_devenu_super-heros.jpg') }}" class="d-block w-100"
+                     alt="Comment je suis devenu super-héros" title="Comment je suis devenu super-héros">
+            </div>
+            <div class="carousel-item">
+                {# Film 14 #}
+                <img src="{{ asset('assets/img/carousel/bac_nord.jpg') }}" class="d-block w-100"
+                     alt="Bac nord" title="Bac nord">
+            </div>
+            <div class="carousel-item">
+                {# Film 15 #}
+                <img src="{{ asset('assets/img/carousel/un_triomphe.jpg') }}" class="d-block w-100"
+                     alt="Un triomphe" title="Un triomphe">
+            </div>
         </div>
-    </header>
-    {# Fin du header #}
+        <a class="carousel-control-prev" href="#top15filmfrfin2020" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#top15filmfrfin2020" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    {# Fin Carousel #}
+</header>
+{# Fin HEADER #}
 
 
-    {% block main %}{% endblock main %}
+{% block main %}{% endblock main %}
 
-    {# Début du footer #}
-    <footer class="container-fluid">
+
+{# Début FOOTER #}
+
+<footer>
+
+    <nav class="navbarStickyMenu">
+        <ul class="navList">
+            <li><a href="{{ path('homepage') }}" class="active">
+                    <div class="navIcons"><img src="{{ asset('assets/img/icon/home.svg') }}" alt="home" class="resp"></div>Accueil
+                </a></li>
+            <li><a href="{{ path('news_list') }}">
+                    <div class="navIcons"><img src="{{ asset('assets/img/icon/actualite.svg') }}" alt="actualite" class="resp"></div>Actualites
+                </a></li>
+            <li><a href="{{ path('movies_list') }}">
+                    <div class="navIcons" id="navIcons3"><img src="{{ asset('assets/img/icon/poster.svg') }}" alt="poster" class="resp"></div>
+                    Films
+                </a></li>
+            <li><a href="{{ path('series_list') }}">
+                    <div class="navIcons"><img src="{{ asset('assets/img/icon/movie.svg') }}" alt="movie" class="resp"></div>Series
+                </a></li>
+            <li><a href="#">
+                    <div class="plus navIcons"><img src="{{ asset('assets/img/icon/more_litght_blue.svg') }}" alt="more" class="resp"></div>Plus
+                </a></li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid" id="footer">
         <nav class="container pt-lg-5">
             <ul class="row justify-content-around pt-lg-3">
-                <li class="col-lg-1 text-center py-lg-1"><a href="">Contact</a></li>
-                <li class="col-lg-2 text-center py-lg-1"><a href="">Qui sommes-nous</a></li>
-                <li class="col-lg-1 text-center py-lg-1"><a href="">CGU</a></li>
-                <li class="col-lg-2 text-center py-lg-1"><a href="">Politique cookies</a></li>
-                <li class="col-lg-2 text-center py-lg-1"><a href="">Préférences cookies</a></li>
-                <li class="col-lg-2 text-center py-lg-1"><a href="">Données Personnelles</a></li>
+                <li class="text-center col-lg-1 py-lg-1"><a href="">Contact</a></li>
+                <li class="text-center col-lg-2 py-lg-1"><a href="">Qui sommes-nous</a></li>
+                <li class="text-center col-lg-1 py-lg-1"><a href="">CGU</a></li>
+                <li class="text-center col-lg-2 py-lg-1"><a href="">Politique cookies</a></li>
+                <li class="text-center col-lg-2 py-lg-1"><a href="">Préférences cookies</a></li>
+                <li class="text-center col-lg-2 py-lg-1"><a href="">Données Personnelles</a></li>
             </ul>
         </nav>
-    </footer>
-    {# Fin du footer #}
+    </div>
+</footer>
+{# Fin FOOTER #}
 
-            <script src="{{'https://code.jquery.com/jquery-3.5.1.slim.min.js'}}"
-                    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-                    crossorigin="anonymous"></script>
-            <script src="{{'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js'}}"
-                    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-                    crossorigin="anonymous"></script>
-            <script src="{{'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'}}"
-                    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-                    crossorigin="anonymous"></script>
-            <script type="text/javascript" src="{{ asset('assets/js/modele_film.js') }}"></script>
+<script src="{{'https://code.jquery.com/jquery-3.5.1.slim.min.js'}}"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="{{'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js'}}"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="{{'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'}}"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="{{ asset('assets/js/modele_film.js') }}"></script>
 
-    </body>
+</body>
+
 </html>

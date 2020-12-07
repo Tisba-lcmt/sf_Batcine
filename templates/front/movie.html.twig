@@ -6,11 +6,12 @@
 
 {% block main %}
 
-{# MAIN #}
+{# Début MAIN #}
 <main class="container-fluid position-relative">
+
     {# FIL D'ARIANNE #}
     <div>
-        <ul>
+        <ul class="mb-0 mb-lg-1">
             <li class="breadcrumb">
                 <a href="{{ path('homepage') }}" class="item">Accueil</a>
                 <a href="{{ path('movies_list') }}" class="item">Films</a>
@@ -18,29 +19,35 @@
             </li>
         </ul>
     </div>
+
     {# SECTION HEADER #}
     <section class="container">
-        <h1 class="text-center my-lg-5">Antoinette dans les Cévennes</h1>
-        {# Ligne nav #}
-        <div class="row align-items-center justify-content-around">
+        <h1 class="mt-3 mb-4 text-center mt-lg-5 mb-lg-4" id="titleFilm">Antoinette dans les Cévennes</h1>
+
+        {# Début ligne nav #}
+        <div class="d-none row justify-content-around align-items-center d-lg-flex mt-lg-2 pb-lg-3">
+
             <div class="col-lg-1 p-lg-0 ml-lg-3">
                 <div class="my-lg-5 mx-lg-1 pl-lg-4 py-lg-3 buttonnavmoviehome">
                     <img src="{{ asset('assets/img/icon/home.svg') }}" alt="home" class="img-fluid" id="navmoviehome">
                 </div>
             </div>
+
             <div class="col-lg-4 p-lg-0">
                 <div class="my-lg-5 mx-lg-1 pl-lg-5 py-lg-3 buttonnavtrailers">
                     <img src="{{ asset('assets/img/icon/video.svg') }}" alt="Video" class="img-fluid" id="navtrailers">
-                    <span class="pl-lg-5 typonavheadersection">Bande-annonce</span>
+                    <span class="pl-lg-5 typonavheadersection">Bande-annonces</span>
                 </div>
 
             </div>
+
             <div class="col-lg-3 p-lg-0">
                 <div class="my-lg-5 mx-lg- pl-lg-5 py-lg-3 buttonnavcasting">
                     <img src="{{ asset('assets/img/icon/casting.svg') }}" alt="Casting" class="img-fluid" id="navcasting">
                     <span class="px-lg-5 typonavheadersection">Casting</span>
                 </div>
             </div>
+
             <div class="col-lg-3 p-lg-0 mr-lg-2">
                 <div class="my-lg-5 mx-lg-1 pl-lg-5 py-lg-3 buttonnavcritiques">
                     <img src="{{ asset('assets/img/icon/avis_critique.svg') }}" alt="Avis critique" class="img-fluid"
@@ -48,106 +55,234 @@
                     <span class="pl-lg-4 pr-lg-3 typonavheadersection">Avis critiques</span>
                 </div>
             </div>
+
         </div>
+        {# Fin ligne nav #}
     </section>
+
     {# SECTION FILMS À L'AFFICHE #}
     <section class="container">
+
         {# Ligne Film #}
         <div class="row align-items-center justify-content-around my-lg-5">
-            <div class="col-lg-4">
+
+            <div class="col-5 col-lg-4">
                 <img src="{{ asset('assets/img/films/affiches/antoinettes_dans_les_cevennes.jpg') }}"
                      alt="Antoinettes dans les Cévennes" title="Antoinettes dans les Cévennes" class="img-fluid">
             </div>
-            <div class="col-lg-5">
+
+            {# Block Desktop #}
+            <div class="d-none col-lg-5 d-lg-block">
                 <p><span class="spanBold">16 septembre 2020</span> / 1h 37min / Comédie, Romance</p>
                 <p>De :<span class="spanOpacity"> Caroline Vignal</span></p>
                 <p><span class="spanOpacity">Avec :</span> Laure Calamy, Benjamin Lavernhe, Olivia Côte</p>
                 <p><span class="spanOpacity">Nationalité :</span> Français</p>
                 <p>Le film fait partie de la Sélection Officielle Cannes 2020.</p>
                 <br>
-                <p class="txtJustify">Des mois qu’Antoinette attend l’été et la promesse d’une semaine en amoureux avec son amant,
+                <p class="txtJustify">Des mois qu’Antoinette attend l’été et la promesse d’une semaine en amoureux
+                    avec son amant,
                     Vladimir. Alors quand celui-ci annule leurs vacances pour partir marcher dans les Cévennes avec
                     sa femme et sa fille, Antoinette ne réfléchit pas longtemps : elle part sur ses traces ! Mais à
                     son arrivée, point de Vladimir - seulement Patrick, un âne récalcitrant qui va l'accompagner
                     dans son singulier périple…</p>
             </div>
-            <div class="col-lg-2">
+
+            {# Block Mobile #}
+            <div class="d-block col-7 d-lg-none" id="infosFilms">
+                <p class="my-1"><span class="spanBold">16 septembre 2020</span> / 1h 37min / Comédie, Romance</p>
+                <p class="my-1">De :<span class="spanOpacity"> Caroline Vignal</span></p>
+                <p class="my-1"><span class="spanOpacity">Avec :</span> Laure Calamy, Benjamin Lavernhe, Olivia Côte
+                </p>
+                <p class="my-0"><span class="spanOpacity">Nationalité :</span> Français</p>
+            </div>
+            <div class="d-block col-12 my-3 py-3 d-lg-none" id="infosFilms2">
+                <p>Le film fait partie de la Sélection Officielle Cannes 2020.</p>
+                <p class="txtJustify">Des mois qu’Antoinette attend l’été et la promesse d’une semaine en amoureux
+                    avec son amant,
+                    Vladimir. Alors quand celui-ci annule leurs vacances pour partir marcher dans les Cévennes avec
+                    sa femme et sa fille, Antoinette ne réfléchit pas longtemps : elle part sur ses traces ! Mais à
+                    son arrivée, point de Vladimir - seulement Patrick, un âne récalcitrant qui va l'accompagner
+                    dans son singulier périple…</p>
+            </div>
+
+            {# Block Desktop #}
+            <div class="d-none col-lg-2 d-lg-block">
                 <div class="px-lg-2 py-lg-2 buttontrailer">
                     <span class="text-center typotrailers">Bande-annonce</span>
                 </div>
+
                 <div class="my-lg-5 px-lg-4 py-lg-2 buttonadd">
-                    <img src="{{ asset('assets/img/icon/add.svg') }}" alt="Ma liste" title="Ma liste" class="img-fluid pr-lg-1"
-                         id="add">
+                    <img src="{{ asset('assets/img/icon/add.svg') }}" alt="Ma liste" title="Ma liste" class="img-fluid" id="add">
                     <span class="typolist pl-lg-1">Ma Liste</span>
                 </div>
             </div>
-        </div>
-    </section>
-    <div class="row justify-content-center">
-        <div class="trait my-lg-5"></div>
-    </div>
-    {# SECTION Trailer #}
-    <section class="container">
-        {# Trailer #}
-        <div class="row align-items-center justify-content-around my-lg-5">
-            <div class="col-lg-1">
-                <div class="flex-column">
-                    <div class="groupe_icon tailleeclair align-items-center">
-                        <div class="icon">
-                            <img src="{{ asset('assets/img/icon/eclair_empty.svg') }}" alt="Eclair Vide" title="Eclair Vide"
-                                 class="img-fluid taileeclair2">
-                        </div>
-                        <div class="icon">
-                            <img src="{{ asset('assets/img/icon/eclair_empty.svg') }}" alt="Eclair Vide" title="Eclair Vide"
-                                 class="img-fluid taileeclair2">
-                        </div>
-                        <div class="icon">
-                            <img src="{{ asset('assets/img/icon/eclair_empty.svg') }}" alt="Eclair Vide" title="Eclair Vide"
-                                 class="img-fluid taileeclair2">
-                        </div>
-                        <div class="icon">
-                            <img src="{{ asset('assets/img/icon/eclair_empty.svg') }}" alt="Eclair Vide" title="Eclair Vide"
-                                 class="img-fluid taileeclair2">
-                        </div>
-                        <div class="icon">
-                            <img src="{{ asset('assets/img/icon/eclair_empty.svg') }}" alt="Eclair Vide" title="Eclair Vide"
-                                 class="img-fluid taileeclair2">
-                        </div>
-                    </div>
-                    <div class="icon 2 my-lg-4 taillelike">
-                        <img src="{{ asset('assets/img/icon/like_empty.svg') }}" alt="Like Vide" title="Like Vide"
-                             class="img-fluid">
-                    </div>
-                    <div class="icon 3 my-lg-4 taillelikebroken">
-                        <img src="{{ asset('assets/img/icon/like_broken_empty.svg') }}" alt="Like Borken Vide"
-                             title="Like Borken Vide" class="img-fluid">
-                    </div>
-                    <div class="icon 4 my-lg-4 taillecomment">
-                        <img src="{{ asset('assets/img/icon/comment.svg') }}" alt="comment" title="comment" class="img-fluid">
-                    </div>
+
+            {# Block Mobile #}
+            <div class="d-block col-4 d-lg-none">
+                <div class="py-2 buttontrailer">
+                    <span class="text-center typotrailers d-block">Bande-annonce</span>
                 </div>
             </div>
+            <div class="d-block col-4 d-lg-none">
+                <div class="py-1 buttonadd">
+                    <img src="{{ asset('assets/img/icon/add.svg') }}" alt="Ma liste" title="Ma liste" class="img-fluid pl-3"
+                         id="add">
+                    <span class="text-center typolist pl-2">Ma Liste</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    {# TRAIT #}
+    <div class="row justify-content-center">
+        <div class="my-5 trait my-lg-5"></div>
+    </div>
+
+    {# SECTION Trailer Desktop #}
+    <section class="d-none container d-lg-block">
+        {# Trailer #}
+        <div class="row align-items-center justify-content-around my-lg-5">
+            <div class=" col-lg-1 flex-column">
+                <div class="tailleeclair">
+                    <div>
+                        <img src="{{ asset('assets/img/icon/eclair_empty.svg') }}" alt="Eclair Vide" title="Eclair Vide"
+                             class="img-fluid taileeclair2">
+                    </div>
+
+                    <div>
+                        <img src="{{ asset('assets/img/icon/eclair_empty.svg') }}" alt="Eclair Vide" title="Eclair Vide"
+                             class="img-fluid taileeclair2">
+                    </div>
+
+                    <div>
+                        <img src="{{ asset('assets/img/icon/eclair_empty.svg') }}" alt="Eclair Vide" title="Eclair Vide"
+                             class="img-fluid taileeclair2">
+                    </div>
+
+                    <div>
+                        <img src="{{ asset('assets/img/icon/eclair_empty.svg') }}" alt="Eclair Vide" title="Eclair Vide"
+                             class="img-fluid taileeclair2">
+                    </div>
+
+                    <div>
+                        <img src="{{ asset('assets/img/icon/eclair_empty.svg') }}" alt="Eclair Vide" title="Eclair Vide"
+                             class="img-fluid taileeclair2">
+                    </div>
+                </div>
+
+                <div class="icon 2 my-lg-4 taillelike">
+                    <img src="{{ asset('assets/img/icon/like_empty.svg') }}" alt="Like Vide" title="Like Vide" class="img-fluid">
+                </div>
+
+                <div class="icon 3 my-lg-4 taillelikebroken">
+                    <img src="{{ asset('assets/img/icon/like_broken_empty.svg') }}" alt="Like Borken Vide" title="Like Borken Vide"
+                         class="img-fluid">
+                </div>
+
+                <div class="icon 4 my-lg-4 taillecomment">
+                    <img src="{{ asset('assets/img/icon/comment.svg') }}" alt="comment" title="comment" class="img-fluid">
+                </div>
+            </div>
+
+            {# Image Film #}
             <div class="col-lg-7">
                 <img src="{{ asset('assets/img/films/paysage/antoinettes_dans_les_cevennes_paysage.jpg') }}"
                      alt="Antoinettes dans les Cévennes" title="Antoinettes dans les Cévennes" class="img-fluid">
             </div>
-            <div class="col-lg-2">
+
+            {# Block Desktop #}
+            <div class="col-lg-2 d-lg-block">
                 <div class="my-lg-5 px-lg-4 py-lg-2 buttonadd">
                     <img src="{{ asset('assets/img/icon/add.svg') }}" alt="Ma liste" title="Ma liste" class="img-fluid pr-lg-1"
                          id="add">
                     <span class="typolist pl-lg-1">Ma Liste</span>
                 </div>
+
                 <div class="text-center px-lg-2 py-lg-2 buttontrailer">
                     <span class="text-center typosynopsis">Synopsis</span>
                 </div>
             </div>
         </div>
     </section>
+
+    {# SECTION Trailer Mobile #}
+    <section class="d-block d-lg-none">
+        {# Trailer #}
+        <div class="row align-items-center justify-content-around my-lg-5">
+            {# Image Film #}
+            <div class="mt-5 col-12">
+                <img src="{{ asset('assets/img/films/paysage/antoinettes_dans_les_cevennes_paysage.jpg') }}"
+                     alt="Antoinettes dans les Cévennes" title="Antoinettes dans les Cévennes" class="img-fluid">
+            </div>
+        </div>
+        <div class="row justify-content-between align-items-center my-2 mx-0">
+            <div class="col-6 p-0 d-flex">
+                <div class="taileeclair">
+                    <img src="{{ asset('assets/img/icon/eclair_empty.svg') }}" alt="Eclair Vide" title="Eclair Vide"
+                         class="img-fluid">
+                </div>
+
+                <div class="taileeclair">
+                    <img src="{{ asset('assets/img/icon/eclair_empty.svg') }}" alt="Eclair Vide" title="Eclair Vide"
+                         class="img-fluid">
+                </div>
+
+                <div class="taileeclair">
+                    <img src="{{ asset('assets/img/icon/eclair_empty.svg') }}" alt="Eclair Vide" title="Eclair Vide"
+                         class="img-fluid">
+                </div>
+
+                <div class="taileeclair">
+                    <img src="{{ asset('assets/img/icon/eclair_empty.svg') }}" alt="Eclair Vide" title="Eclair Vide"
+                         class="img-fluid">
+                </div>
+
+                <div class="taileeclair">
+                    <img src="{{ asset('assets/img/icon/eclair_empty.svg') }}" alt="Eclair Vide" title="Eclair Vide"
+                         class="img-fluid">
+                </div>
+            </div>
+            <div class="col-6 p-0 d-flex justify-content-end">
+                <div class="taillelike">
+                    <img src="{{ asset('assets/img/icon/like_empty.svg') }}" alt="Like Vide" title="Like Vide" class="img-fluid">
+                </div>
+
+                <div class="taillelikebroken">
+                    <img src="{{ asset('assets/img/icon/like_broken_empty.svg') }}" alt="Like Borken Vide" title="Like Borken Vide"
+                         class="img-fluid">
+                </div>
+
+                <div class="taillecomment">
+                    <img src="{{ asset('assets/img/icon/comment.svg') }}" alt="comment" title="comment" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-around my-5">
+            {# Block Mobile #}
+            <div class="col-4">
+                <div class="py-1 buttonadd">
+                    <img src="{{ asset('assets/img/icon/add.svg') }}" alt="Ma liste" title="Ma liste" class="img-fluid pl-3"
+                         id="add">
+                    <span class="text-center typolist pl-2">Ma Liste</span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="py-2 buttontrailer">
+                    <span class="text-center typosynopsis d-block">Synopsis</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {# BOUTON RETURN TOP #}
     <a href="#">
-        <div class="return-top_position position-fixed">
-            <img src="{{ asset('assets/img/icon/return_top.svg') }}" alt="" class="return_top_icon">
+        <div class="returnTopPosition returnTopLightBlue d-none d-lg-block">
+            <img src="{{ asset('assets/img/icon/return_top_light_blue.svg') }}" alt="Return Top" class="resp">
         </div>
     </a>
 </main>
+{# Fin MAIN #}
 
 {% endblock main %}

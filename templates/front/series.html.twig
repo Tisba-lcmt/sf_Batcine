@@ -6,197 +6,229 @@
 
 {% block main %}
 
-{# MAIN #}
-<main class="container-fluid position-relative">
+{# Début MAIN #}
+<main class="container-fluid position-relative m-0">
+
     {# FIL D'ARIANNE #}
     <div>
-        <ul>
+        <ul class="mb-0 mb-lg-1">
             <li class="breadcrumb">
                 <a href="{{ path('homepage') }}" class="item">Accueil</a>
                 <a href="{{ path('series_list') }}" class="item">Séries</a>
             </li>
         </ul>
     </div>
-    {# SECTION SÉRIES #}
-    <section class="container">
-        <h1 class="text-center my-lg-5">Nouvelles series</h1>
+
+    {# SECTION NOUVELLES SERIES #}
+    <section class="container" id="series">
+        <h1 class="mb-3 text-center mb-lg-5 mt-lg-4 pb-lg-3">Nouvelles series</h1>
+
         {# Ligne 1 #}
-        <div class="row align-items-center justify-content-around">
-            <div class="col-lg-3">
-                {# PREMIER FILM #}
+        <div class="row justify-content-around align-items-center">
+
+            {# PREMIER FILM #}
+            <div class="col-8 mb-5 col-lg-3 mb-lg-0">
                 <a href="{{ path('currentMovie_show') }}">
                     <img src="{{ asset('assets/img/series/affiches/la_flamme.jpg') }}" alt="La flamme" title="La flamme"
                          class="img-fluid">
-                    <h2 class="mt-lg-3">La Flamme</h2>
-                    <h3>De :<span> Jonathan Cohen, Jérémie Galan,
+                    <h2 class="my-0 pt-3 mt-lg-3">La Flamme</h2>
+                    <h3 class="my-0 pt-2">De :<span> Jonathan Cohen, Jérémie Galan,
                             Florent Bernard</span></h3>
                 </a>
             </div>
-            <div class="col-lg-3">
-                {# DEUXIEME FILM #}
+
+            {# DEUXIEME FILM #}
+            <div class="col-8 mb-5 col-lg-3 mb-lg-0">
                 <a href="{{ path('currentMovie_show') }}">
                     <img src="{{ asset('assets/img/series/affiches/le_mensonge.jpg') }}" alt="Le mensonge" title="Le mensonge"
                          class="img-fluid">
-                    <h2 class="mt-lg-3">Le Mensonge</h2>
-                    <h3>De :<span> Vincent Garenq</span></h3>
+                    <h2 class="my-0 pt-3 mt-lg-3">Le Mensonge</h2>
+                    <h3 class="my-0 pt-2">De :<span> Vincent Garenq</span></h3>
                 </a>
             </div>
-            <div class="col-lg-3">
-                {# TROISIEME FILM #}
+
+            {# TROISIEME FILM #}
+            <div class="col-8 mb-5 col-lg-3 mb-lg-0">
                 <a href="{{ path('currentMovie_show') }}">
                     <img src="{{ asset('assets/img/series/affiches/no_mans_land.jpg') }}" alt="No Mans Land" title="No Mans Land"
                          class="img-fluid">
-                    <h2 class="mt-lg-3">No Man's Land</h2>
-                    <h3>De :<span> Maria Feldman, Eitan Mansuri,
+                    <h2 class="my-0 pt-3 mt-lg-3">No Man's Land</h2>
+                    <h3 class="my-0 pt-2">De :<span> Maria Feldman, Eitan Mansuri,
                             Amit Cohen</span></h3>
                 </a>
             </div>
         </div>
+
         {# Ligne 2 #}
-        <div class="row align-items-center justify-content-around mt-lg-5">
-            <div class="col-lg-3">
-                {# PREMIER FILM #}
+        <div class="row justify-content-around align-items-center mt-lg-5">
+
+            {# PREMIER FILM #}
+            <div class="col-8 mb-5 col-lg-3 mb-lg-0">
                 <a href="{{ path('currentMovie_show') }}">
                     <img src="{{ asset('assets/img/series/affiches/la_flamme.jpg') }}" alt="La flamme" title="La flamme"
                          class="img-fluid">
-                    <h2 class="mt-lg-3">La Flamme</h2>
-                    <h3>De :<span> Jonathan Cohen, Jérémie Galan,
+                    <h2 class="my-0 pt-3 mt-lg-3">La Flamme</h2>
+                    <h3 class="my-0 pt-2">De :<span> Jonathan Cohen, Jérémie Galan,
                             Florent Bernard</span></h3>
                 </a>
             </div>
-            <div class="col-lg-3">
-                {# DEUXIEME FILM #}
+
+            {# DEUXIEME FILM #}
+            <div class="col-8 mb-5 col-lg-3 mb-lg-0">
                 <a href="{{ path('currentMovie_show') }}">
                     <img src="{{ asset('assets/img/series/affiches/le_mensonge.jpg') }}" alt="Le mensonge" title="Le mensonge"
                          class="img-fluid">
-                    <h2 class="mt-lg-3">Le Mensonge</h2>
-                    <h3>De :<span> Vincent Garenq</span></h3>
+                    <h2 class="my-0 pt-3 mt-lg-3">Le Mensonge</h2>
+                    <h3 class="my-0 pt-2">De :<span> Vincent Garenq</span></h3>
                 </a>
             </div>
-            <div class="col-lg-3">
-                {# TROISIEME FILM #}
+
+            {# TROISIEME FILM #}
+            <div class="col-8 mb-5 col-lg-3 mb-lg-0">
                 <a href="{{ path('currentMovie_show') }}">
                     <img src="{{ asset('assets/img/series/affiches/no_mans_land.jpg') }}" alt="No Mans Land" title="No Mans Land"
                          class="img-fluid">
-                    <h2 class="mt-lg-3">No Man's Land</h2>
-                    <h3>De :<span> Maria Feldman, Eitan Mansuri,
+                    <h2 class="my-0 pt-3 mt-lg-3">No Man's Land</h2>
+                    <h3 class="my-0 pt-2">De :<span> Maria Feldman, Eitan Mansuri,
                             Amit Cohen</span></h3>
                 </a>
             </div>
         </div>
+
         {# Ligne 3 #}
-        <div class="row align-items-center justify-content-around mt-lg-5">
-            <div class="col-lg-3">
-                {# PREMIER FILM #}
+        <div class="row justify-content-around align-items-center mt-lg-5">
+
+            {# PREMIER FILM #}
+            <div class="col-8 mb-5 col-lg-3 mb-lg-0">
                 <a href="{{ path('currentMovie_show') }}">
                     <img src="{{ asset('assets/img/series/affiches/la_flamme.jpg') }}" alt="La flamme" title="La flamme"
                          class="img-fluid">
-                    <h2 class="mt-lg-3">La Flamme</h2>
-                    <h3>De :<span> Jonathan Cohen, Jérémie Galan,
+                    <h2 class="my-0 pt-3 mt-lg-3">La Flamme</h2>
+                    <h3 class="my-0 pt-2">De :<span> Jonathan Cohen, Jérémie Galan,
                             Florent Bernard</span></h3>
                 </a>
             </div>
-            <div class="col-lg-3">
-                {# DEUXIEME FILM #}
+
+            {# DEUXIEME FILM #}
+            <div class="col-8 mb-5 col-lg-3 mb-lg-0">
                 <a href="{{ path('currentMovie_show') }}">
                     <img src="{{ asset('assets/img/series/affiches/le_mensonge.jpg') }}" alt="Le mensonge" title="Le mensonge"
                          class="img-fluid">
-                    <h2 class="mt-lg-3">Le Mensonge</h2>
-                    <h3>De :<span> Vincent Garenq</span></h3>
+                    <h2 class="my-0 pt-3 mt-lg-3">Le Mensonge</h2>
+                    <h3 class="my-0 pt-2">De :<span> Vincent Garenq</span></h3>
                 </a>
             </div>
-            <div class="col-lg-3">
-                {# TROISIEME FILM #}
+
+            {# TROISIEME FILM #}
+            <div class="col-8 mb-5 col-lg-3 mb-lg-0">
                 <a href="{{ path('currentMovie_show') }}">
                     <img src="{{ asset('assets/img/series/affiches/no_mans_land.jpg') }}" alt="No Mans Land" title="No Mans Land"
                          class="img-fluid">
-                    <h2 class="mt-lg-3">No Man's Land</h2>
-                    <h3>De :<span> Maria Feldman, Eitan Mansuri,
+                    <h2 class="my-0 pt-3 mt-lg-3">No Man's Land</h2>
+                    <h3 class="my-0 pt-2">De :<span> Maria Feldman, Eitan Mansuri,
                             Amit Cohen</span></h3>
                 </a>
             </div>
         </div>
+
         {# Ligne 4 #}
-        <div class="row align-items-center justify-content-around mt-lg-5">
-            <div class="col-lg-3">
-                {# PREMIER FILM #}
+        <div class="row justify-content-around align-items-center mt-lg-5">
+
+            {# PREMIER FILM #}
+            <div class="col-8 mb-5 col-lg-3 mb-lg-0">
                 <a href="{{ path('currentMovie_show') }}">
                     <img src="{{ asset('assets/img/series/affiches/la_flamme.jpg') }}" alt="La flamme" title="La flamme"
                          class="img-fluid">
-                    <h2 class="mt-lg-3">La Flamme</h2>
-                    <h3>De :<span> Jonathan Cohen, Jérémie Galan,
+                    <h2 class="my-0 pt-3 mt-lg-3">La Flamme</h2>
+                    <h3 class="my-0 pt-2">De :<span> Jonathan Cohen, Jérémie Galan,
                             Florent Bernard</span></h3>
                 </a>
             </div>
-            <div class="col-lg-3">
-                {# DEUXIEME FILM #}
+
+            {# DEUXIEME FILM #}
+            <div class="col-8 mb-5 col-lg-3 mb-lg-0">
                 <a href="{{ path('currentMovie_show') }}">
                     <img src="{{ asset('assets/img/series/affiches/le_mensonge.jpg') }}" alt="Le mensonge" title="Le mensonge"
                          class="img-fluid">
-                    <h2 class="mt-lg-3">Le Mensonge</h2>
-                    <h3>De :<span> Vincent Garenq</span></h3>
+                    <h2 class="my-0 pt-3 mt-lg-3">Le Mensonge</h2>
+                    <h3 class="my-0 pt-2">De :<span> Vincent Garenq</span></h3>
                 </a>
             </div>
-            <div class="col-lg-3">
-                {# TROISIEME FILM #}
+
+            {# TROISIEME FILM #}
+            <div class="col-8 mb-5 col-lg-3 mb-lg-0">
                 <a href="{{ path('currentMovie_show') }}">
                     <img src="{{ asset('assets/img/series/affiches/no_mans_land.jpg') }}" alt="No Mans Land" title="No Mans Land"
                          class="img-fluid">
-                    <h2 class="mt-lg-3">No Man's Land</h2>
-                    <h3>De :<span> Maria Feldman, Eitan Mansuri,
+                    <h2 class="my-0 pt-3 mt-lg-3">No Man's Land</h2>
+                    <h3 class="my-0 pt-2">De :<span> Maria Feldman, Eitan Mansuri,
                             Amit Cohen</span></h3>
                 </a>
             </div>
         </div>
+
         {# Ligne 5 #}
-        <div class="row align-items-center justify-content-around mt-lg-5">
-            <div class="col-lg-3">
-                {# PREMIER FILM #}
+        <div class="row justify-content-around align-items-center mt-lg-5">
+
+            {# PREMIER FILM #}
+            <div class="col-8 mb-5 col-lg-3 mb-lg-0">
                 <a href="{{ path('currentMovie_show') }}">
                     <img src="{{ asset('assets/img/series/affiches/la_flamme.jpg') }}" alt="La flamme" title="La flamme"
                          class="img-fluid">
-                    <h2 class="mt-lg-3">La Flamme</h2>
-                    <h3>De :<span> Jonathan Cohen, Jérémie Galan,
+                    <h2 class="my-0 pt-3 mt-lg-3">La Flamme</h2>
+                    <h3 class="my-0 pt-2">De :<span> Jonathan Cohen, Jérémie Galan,
                             Florent Bernard</span></h3>
                 </a>
             </div>
-            <div class="col-lg-3">
-                {# DEUXIEME FILM #}
+
+            {# DEUXIEME FILM #}
+            <div class="col-8 mb-5 col-lg-3 mb-lg-0">
                 <a href="{{ path('currentMovie_show') }}">
                     <img src="{{ asset('assets/img/series/affiches/le_mensonge.jpg') }}" alt="Le mensonge" title="Le mensonge"
                          class="img-fluid">
-                    <h2 class="mt-lg-3">Le Mensonge</h2>
-                    <h3>De :<span> Vincent Garenq</span></h3>
+                    <h2 class="my-0 pt-3 mt-lg-3">Le Mensonge</h2>
+                    <h3 class="my-0 pt-2">De :<span> Vincent Garenq</span></h3>
                 </a>
             </div>
-            <div class="col-lg-3">
-                {# TROISIEME FILM #}
+
+            {# TROISIEME FILM #}
+            <div class="col-8 mb-5 col-lg-3 mb-lg-0">
                 <a href="{{ path('currentMovie_show') }}">
                     <img src="{{ asset('assets/img/series/affiches/no_mans_land.jpg') }}" alt="No Mans Land" title="No Mans Land"
                          class="img-fluid">
-                    <h2 class="mt-lg-3">No Man's Land</h2>
-                    <h3>De :<span> Maria Feldman, Eitan Mansuri,
+                    <h2 class="my-0 pt-3 mt-lg-3">No Man's Land</h2>
+                    <h3 class="my-0 pt-2">De :<span> Maria Feldman, Eitan Mansuri,
                             Amit Cohen</span></h3>
                 </a>
             </div>
         </div>
+
         {# BOUTON NEXT PAGE #}
-        <div class="row text-center justify-content-center align-items-center my-lg-5">
-            <div class="col-lg-2 py-lg-1" id="buttonnext_page">
-                <span class="text-center TailleSpanPage ">Page 1</span>
+        <div class="row mb-5 pb-5 text-center justify-content-center align-items-center my-lg-5 pb-lg-0">
+            <div class="col-4 col-lg-2 py-lg-1" id="buttonnext_page">
+                <span class="text-center TailleSpanPage">Page 1</span>
             </div>
-            <div class="col-lg-1">
+            <div class="col-3 col-lg-1">
                 {# ICON NEXT PAGE #}
                 <img src="{{ asset('assets/img/icon/next_page_right.svg') }}" alt="Page 1" title="Page 1" class="img-fluid"
                      id="next_page">
             </div>
         </div>
     </section>
+
+    {# BOUTON RETURN TOP #}
     <a href="#">
-        <div class="return-top_position position-fixed">
-            <img src="{{ asset('assets/img/icon/return_top.svg') }}" alt="" class="return_top_icon">
+        <div class="returnTopPosition returnTopLightBlue d-none d-lg-block">
+            <img src="{{ asset('assets/img/icon/return_top_light_blue.svg') }}" alt="Return Top" class="resp">
+        </div>
+    </a>
+
+    <a href="#">
+        <div class="mb-5 d-block returnTopPosition returnTopDarkBlue d-lg-none">
+            <img src="{{ asset('assets/img/icon/return_top_dark_blue.svg') }}" alt="Return Top" class="resp">
         </div>
     </a>
 </main>
+{# Fin MAIN #}
 
 {% endblock main %}

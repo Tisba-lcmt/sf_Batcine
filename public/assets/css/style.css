@@ -6,24 +6,22 @@
     box-sizing: border-box;
 }
 
-    /** Liens globaux **/
-    li {
-        list-style-type: none;
-    }
-    li>a {
-        color: rgb(84, 194,240);
-    }
-    li>a:hover, header .active {
-        text-decoration: none;
-        color: rgb(40 , 46 , 103);
-    }
+/** Liens globaux **/
+li {
+    list-style-type: none;
+}
+li>a {
+    color: rgb(84, 194,240);
+}
+li>a:hover, header .active {
+    text-decoration: none;
+    color: rgb(40 , 46 , 103);
+}
 
-    /** Hover des infos Films **/
-    a:hover {
-        text-decoration: none;
-    }
-
-
+/** Hover des infos Films **/
+a:hover {
+    text-decoration: none;
+}
 
 /**** ADMINISTRATEUR ****/
 
@@ -113,7 +111,7 @@
     margin: 5px;
 }
 .form .errorStyle {
-    color: red;
+    color: #ff0000;
 }
 .form .image {
     width: 30%;
@@ -157,10 +155,11 @@
 header>nav{
     /* height: 10vh; */
     height: 75px;
+    margin-top: 20px;
 }
 header>nav a {
     font-size: 1.1em;
-}   
+}
     /** Navigation Position Logo **/
     .cercle{
         position: absolute;
@@ -288,7 +287,7 @@ header>nav a {
         font-size: 1em;
     }
     .typolist {
-        font-size: 0.9em; 
+        font-size: 0.9em;
     }
     .typolimenu {
         font-size: 0.9em;
@@ -308,7 +307,7 @@ header>nav a {
         font-size: 1.1em;
     }
 
-    #buttonnext_page, .buttontrailer, .buttonadd, .buttonnavmoviehome, 
+    #buttonnext_page, .buttontrailer, .buttonadd, .buttonnavmoviehome,
     .buttonnavtrailers, .buttonnavcasting, .buttonnavcritiques {
         border: solid 3px rgb(40,46,103);
     }
@@ -362,60 +361,10 @@ header>nav a {
         width: 13%;
     }
     #navcritiques {
-        width: 21%;    
+        width: 21%;
     }
 
 /** Section Nom du Film **/
-
-#m117 {
-    border: rebeccapurple 2px solid;
-    background-color: rebeccapurple;        
-}    
-
-#m118 {
-    border: orange 2px solid;
-    background-color: orange;    
-}
-
-#m119 {
-    border: red 2px solid;
-    background-color: red;
-}
-
-#m120 {
-    border: lightgreen 2px solid;
-    background-color: lightgreen;
-}
-
-#m121 {
-    border: lightsalmon 2px solid;
-    background-color: lightsalmon;
-}
-
-#m122 {
-    border: lightslategray 2px solid;
-    background-color: lightslategray;
-}
-
-#m123 {
-    border: lightyellow 2px solid;
-    background-color: lightyellow;
-}
-
-#m124 {
-    border: lightpink 2px solid;
-    background-color: lightpink;
-}
-
-#m125 {
-    border: lightseagreen 2px solid;
-    background-color: lightseagreen;
-}
-
-#m126 {
-    border: lightsteelblue 2px solid;
-    background-color: lightsteelblue;
-}
 
 /**** FOOTER ****/
     #footer {
@@ -448,20 +397,39 @@ header>nav a {
     /*** Medium screens ***/
 
     @media screen and (max-width: 768px) {
-        
+
     }
 
     /*** Small screens ***/
     
     @media screen and (max-width: 576px) {
+        /**** Volet ****/
+        .slider {
+            position: absolute;
+            background-color: red;
+            height: calc(100vh - 79px);
+            position: fixed;
+            width: 60vw;
+            margin:  0;
+            z-index: 5;
+            transition: ease-in 0.4s all;
+        }
+
+        .hidden {
+            right: -60vw;
+        }
+
+        .show {
+            right: 0;
+        }
 
         /**** HEADER ****/
-        
+
         header>nav {
             height: 90px;
             margin: 0;
         }
-        
+
         /** Navigation Position Logo **/
 
         .cercle{
@@ -604,55 +572,8 @@ header>nav a {
 
         /** Section Nom du Film **/
 
-        #m117 {
-            border: rebeccapurple 2px solid;
-            background-color: rebeccapurple;        
-        }    
-
-        #m118 {
-            border: orange 2px solid;
-            background-color: orange;    
-        }
-
-        #m119 {
-            border: red 2px solid;
-            background-color: red;
-        }
-
-        #m120 {
-            border: lightgreen 2px solid;
-            background-color: lightgreen;
-        }
-
-        #m121 {
-            border: lightsalmon 2px solid;
+        #titleFilm {
             font-size: 1.6em;
-            background-color: lightsalmon;
-        }
-
-        #m122 {
-            border: lightslategray 2px solid;
-            background-color: lightslategray;
-        }
-
-        #m123 {
-            border: lightyellow 2px solid;
-            background-color: lightyellow;
-        }
-
-        #m124 {
-            border: lightpink 2px solid;
-            background-color: lightpink;
-        }
-
-        #m125 {
-            border: lightseagreen 2px solid;
-            background-color: lightseagreen;
-        }
-
-        #m126 {
-            border: lightsteelblue 2px solid;
-            background-color: lightsteelblue;
         }
 
         #infosFilms>p {
@@ -695,28 +616,18 @@ header>nav a {
 
         /** ICONS **/
 
-        .tailleeclair {
-            width: 5%;
-        }
-        .taillelike {
-            width: 5%;
-        }
-        .taillelikebroken {
-            width: 5%;
-        }
-        .taillecomment {
-            width: 5%;
+        .taileeclair, .taillelike, .taillelikebroken, .taillecomment {
+            width: 17%;
         }
 
-        #iconsInfosFilms {
-            background-color: khaki;
-            display: flex;
+        .taillelikebroken {
+            margin: 0 30px;
         }
 
         /**** Footer ****/
-         #footer {
-             display: none;
-         }
+        #footer {
+            display: none;
+        }
 
             /** NAVBAR STICKY MENU **/
             footer {
