@@ -6,6 +6,7 @@ namespace App\Controller\admin;
 
 use App\Entity\News;
 use App\Form\NewsType;
+use App\Repository\NewsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -18,9 +19,13 @@ class AdminNewsController extends AbstractController
      * @Route("/admin/news", name="admin_news_list")
      */
 
-    public function newsList()
+    public function newsList(NewsRepository $newsRepository)
     {
-        return $this->render('admin/news.html.twig');
+        $news = $newsRepository->findAll();
+
+        return $this->render('admin/news.html.twig', [
+            'news' => $news
+        ]);
     }
 
     /**
@@ -67,12 +72,51 @@ class AdminNewsController extends AbstractController
     }
 
     /**
-     * @Route("/admin/new/update", name="admin_new_update")
+     * @Route("/admin/new/update/{id}", name="admin_new_update")
      */
 
-    public function updateNew()
+    public function updateNew(
+        $id,
+        NewsRepository $newsRepository,
+        Request $request,
+        EntityManagerInterface $entityManager,
+        SluggerInterface $slugger
+    )
     {
-        return $this->render('/admin/updateNews.html.twig');
+        $new = $newsRepository->find($id);
+        if (is_null($new)) {
+            return $this->redirectToRoute('admin_news_list');
+        }
+        $form = $this->createForm(NewsType::class, $new);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $imageFile = $form->get('image')->getData();
+
+            if ($imageFile) {
+                $originalFile = pathinfo($imageFile->getClientOriginalName(), PATHINFO_FILENAME);
+                $safeFile = $slugger->slug($originalFile);
+                $newFile = $safeFile. '-'.uniqid().'.'.$imageFile->guessExtension();
+                $imageFile->move(
+                    $this->getParameter('images_directory_news'),
+                    $newFile
+                );
+
+                $new->setImage($newFile);
+            }
+
+            $entityManager->persist($new);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('admin_news_list');
+
+        }
+
+        $formView = $form->createView();
+
+        return $this->render('/admin/updateNews.html.twig', [
+            'formView' => $formView
+        ]);
     }
 
     /**

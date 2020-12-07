@@ -9,11 +9,28 @@
     <a href="{{ path('admin_new_insert') }}">
         <button>Créer une actualité</button>
     </a>
-    <a href="{{ path('admin_new_update') }}">
-        <button>Modifier une actualité</button>
-    </a>
-    <a href="{{ path('admin_new_delete') }}">
-        <button>Supprimer une actualité</button>
-    </a>
+
+    <section class="row flex-wrap justify-center" id="news">
+        {% for new in news %}
+            <div class="card">
+                <a href="{{ path('new_show', {'id': new.id}) }}">
+                    {% if new.image %}
+                    <div class="imgNews">
+                        <img src="{{ asset('uploads/news/' ~ new.image) }}" alt="" class="resp">
+                    </div>
+                    {% endif %}
+                    <h1>{{ new.title }}</h1>
+                </a>
+                <div class="row flex justify-around relative" id="cud">
+                    <a href="{{ path('admin_new_update', {'id': new.id}) }}">
+                        <button>Modifier une actualité</button>
+                    </a>
+                    <a href="{{ path('admin_new_delete', {'id': new.id}) }}">
+                        <button>Supprimer une actualité</button>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
 </main>
 {% endblock main %}
