@@ -56,8 +56,9 @@
     {# Partie supérieure du header, la navigation et logo #}
     <nav class="container position-relative">
         <ul class="row justify-content-between py-lg-3">
+            {% block NavLienActive %}
             <li class="d-none text-center typohead col-lg-2 d-lg-block">
-                <a href="{{ path('homepage') }}" class="active">Accueil</a>
+                <a href="{{ path('homepage') }}">Accueil</a>
             </li>
             <li class="d-none text-center typohead col-lg-2 d-lg-block">
                 <a href="{{ path('news_list') }}">Actualités</a>
@@ -85,6 +86,7 @@
             <li class="d-none text-center typohead col-lg-2 d-lg-block">
                 <a href="{{ path('series_list') }}">Séries</a>
             </li>
+            {% endblock %}
             <li class="text-center typohead col-lg-1" id="login">
                 <a href="">
                     <img src="{{ asset('assets/img/icon/login.svg') }}" alt="Login" title="Login" class="img-fluid">
@@ -194,9 +196,10 @@
 
 <footer>
 
+    {% block activeNavMenuSticky %}
     <nav class="navbarStickyMenu">
         <ul class="navList">
-            <li><a href="{{ path('homepage') }}" class="active">
+            <li><a href="{{ path('homepage') }}">
                     <div class="navIcons"><img src="{{ asset('assets/img/icon/home.svg') }}" alt="home" class="resp"></div>Accueil
                 </a></li>
             <li><a href="{{ path('news_list') }}">
@@ -214,6 +217,7 @@
                 </a></li>
         </ul>
     </nav>
+    {% endblock %}
 
     <div class="container-fluid" id="footer">
         <nav class="container pt-lg-5">

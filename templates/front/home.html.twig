@@ -4,6 +4,39 @@
     Accueil
 {% endblock title %}
 
+
+{% block NavLienActive %}
+    <li class="d-none text-center typohead col-lg-2 d-lg-block">
+        <a href="{{ path('homepage') }}" class="active">Accueil</a>
+    </li>
+    <li class="d-none text-center typohead col-lg-2 d-lg-block">
+        <a href="{{ path('news_list') }}">Actualités</a>
+    </li>
+    <li class="cercle">
+        <div id="circletransp">
+            <a href="{{ path('homepage') }}">
+                <img src="{{ asset('assets/img/logo/logo_batcine_blanc.svg') }}"
+                     alt="Batcine Logo" title="Batcine Logo"
+                     class="img-fluid" id="logo">
+            </a>
+        </div>
+    </li>
+    <li class="d-none text-center typohead menu z_menu col-lg-2 d-lg-block">
+        <a href="{{ path('movies_list') }}">Films</a>
+        <ul class="sub my-lg-5">
+            <li class="sub1 px-lg-3 pt-lg-3 pb-lg-1">
+                <a href="{{ path('currentMovies_list') }}" class="typolimenu">Film à l'affiche</a>
+            </li>
+            <li class="sub2 pb-lg-3">
+                <a href="{{ path('upcomingMovies_list') }}" class="typolimenu">Prochainement</a>
+            </li>
+        </ul>
+    </li>
+    <li class="d-none text-center typohead col-lg-2 d-lg-block">
+        <a href="{{ path('series_list') }}">Séries</a>
+    </li>
+{% endblock %}
+
 {% block main %}
 
 {# Début MAIN #}
@@ -237,4 +270,27 @@
 {# Fin MAIN #}
 
 {% endblock main %}
+
+    {% block activeNavMenuSticky %}
+    <nav class="navbarStickyMenu">
+        <ul class="navList">
+            <li><a href="{{ path('homepage') }}" class="active">
+                    <div class="navIcons"><img src="{{ asset('assets/img/icon/home.svg') }}" alt="home" class="resp"></div>Accueil
+                </a></li>
+            <li><a href="{{ path('news_list') }}">
+                    <div class="navIcons"><img src="{{ asset('assets/img/icon/actualite.svg') }}" alt="actualite" class="resp"></div>Actualites
+                </a></li>
+            <li><a href="{{ path('movies_list') }}">
+                    <div class="navIcons" id="navIcons3"><img src="{{ asset('assets/img/icon/poster.svg') }}" alt="poster" class="resp"></div>
+                    Films
+                </a></li>
+            <li><a href="{{ path('series_list') }}">
+                    <div class="navIcons"><img src="{{ asset('assets/img/icon/movie.svg') }}" alt="movie" class="resp"></div>Series
+                </a></li>
+            <li><a href="#">
+                    <div class="plus navIcons"><img src="{{ asset('assets/img/icon/more_litght_blue.svg') }}" alt="more" class="resp"></div>Plus
+                </a></li>
+        </ul>
+    </nav>
+    {% endblock %}
 

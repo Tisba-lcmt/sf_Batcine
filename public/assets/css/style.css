@@ -25,6 +25,10 @@ a:hover {
 
 /**** ADMINISTRATEUR ****/
 
+.resp {
+    width: 100%;
+    height: auto;
+}
 .baseAdmin>header {
     margin: 0;
     box-sizing: border-box;
@@ -36,6 +40,7 @@ a:hover {
     height: 50px;
     display: flex;
     align-items: center;
+    margin: 0;
 }
 
 .baseAdmin>header ul {
@@ -52,7 +57,7 @@ a:hover {
 }
 
 .baseAdmin>main h1 {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     text-align: center;
     font-size: 32px;
     color: black;
@@ -63,6 +68,7 @@ a:hover {
     width: 33.33%;
     display: block;
     margin: 25px auto;
+    text-decoration: none;
 }
 .baseAdmin>main button {
     width: 100%;
