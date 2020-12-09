@@ -6,26 +6,27 @@
 <main>
     <h1>CRUD News</h1>
 
-    <a href="{{ path('admin_new_insert') }}">
+    <a href="{{ path('admin_new_insert') }}" class="btnAdd">
         <button>Créer une actualité</button>
     </a>
 
-    <section class="row flex-wrap justify-center" id="news">
+    <section class="row m-0">
         {% for new in news %}
-            <div class="card">
-                <a href="{{ path('new_show', {'id': new.id}) }}">
+            <div class="card col-6">
+                <h1>{{ new.title }}</h1>
+                <a href="{{ path('new_show', {'id': new.id}) }}" class="container">
                     {% if new.image %}
-                    <div class="imgNews">
+                    <div>
                         <img src="{{ asset('uploads/news/' ~ new.image) }}" alt="" class="resp">
                     </div>
                     {% endif %}
-                    <h1>{{ new.title }}</h1>
+                    <p>{{ new.content }}</p>
                 </a>
-                <div class="row flex justify-around relative" id="cud">
-                    <a href="{{ path('admin_new_update', {'id': new.id}) }}">
+                <div class="btnZone">
+                    <a href="{{ path('admin_new_update', {'id': new.id}) }}" class="btnUpdate">
                         <button>Modifier une actualité</button>
                     </a>
-                    <a href="{{ path('admin_new_delete', {'id': new.id}) }}">
+                    <a href="{{ path('admin_new_delete', {'id': new.id}) }}" class="btnDelete">
                         <button>Supprimer une actualité</button>
                     </a>
                 </div>

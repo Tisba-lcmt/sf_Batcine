@@ -56,147 +56,29 @@
     <section class="container" id="actualites">
         <h1 class="mb-3 text-center mb-lg-5 mt-lg-4 pb-lg-3">Actualités</h1>
 
+        {% for new in news %}
         <div class="row justify-content-around align-items-center">
+            {# Si mon tour de boucle est impair #}
+            {% if loop.index is odd %}
             {# Actu 1 #}
             <div class="col-lg-5">
-                <img src="{{ asset('assets/img/actualites/Claude-Lelouch.jpg') }}" alt="" class="img-fluid">
+                <img src="{{ asset('uploads/news/' ~ new.image) }}" alt="" class="img-fluid">
             </div>
             <article class="my-4 col-lg-5">
-                <p class="txtJustify mb-lg-0">Claude Lelouch réunit une vaste distribution pour son dernier film. Il
-                    s'est
-                    confié sur le tournage de son
-                    prochain et dernier long métrage, "L'Amour, c'est mieux que la vie". Il y réunira un casting
-                    hétéroclite,
-                    parmi lesquels Jean-Louis Trintignant, Kev Adams et Béatrice Dalle.</p>
+                <p class="txtJustify mb-lg-0">{{ new.content }}</p>
             </article>
-
+            {% else %}
             {# Actu 2 #}
             <article class="my-4 col-lg-5 order-2 order-lg-1">
-                <p class="txtJustify mb-lg-0">Bande-annonce Les Cobayes : Thomas Ngijol et Judith Chemla prêts à
-                    tout pour
-                    sauver leur couple.
-                    Découvrez la bande-annonce des Cobayes, une comédie sur le désir et la passion dans le couple,
-                    portée par
-                    Thomas Ngijol et Judith Chemla. Au cinéma le 25 novembre.
-                </p>
+                <p class="txtJustify mb-lg-0">{{ new.content }}</p>
             </article>
             <div class="col-lg-5 my-lg-5 order-1 order-lg-2">
-                <img src="{{ asset('assets/img/actualites/Les-Cobayes.jpg') }}" alt="" class="img-fluid">
+                <img src="{{ asset('uploads/news/' ~ new.image) }}" alt="" class="img-fluid">
             </div>
+            {% endif %}
         </div>
+        {% endfor %}
 
-        <div class="row justify-content-around align-items-center">
-            {# Actu 3 #}
-            <div class="col-lg-5">
-                <img src="{{ asset('assets/img/actualites/Claude-Lelouch.jpg') }}" alt="" class="img-fluid">
-            </div>
-            <article class="my-4 col-lg-5">
-                <p class="txtJustify mb-lg-0">Claude Lelouch réunit une vaste distribution pour son dernier film. Il
-                    s'est
-                    confié sur le tournage de son
-                    prochain et dernier long métrage, "L'Amour, c'est mieux que la vie". Il y réunira un casting
-                    hétéroclite,
-                    parmi lesquels Jean-Louis Trintignant, Kev Adams et Béatrice Dalle.</p>
-            </article>
-
-            {# Actu 4 #}
-            <article class="my-4 col-lg-5 order-2 order-lg-1">
-                <p class="txtJustify mb-lg-0">Bande-annonce Les Cobayes : Thomas Ngijol et Judith Chemla prêts à tout pour sauver leur couple.
-                    Découvrez la bande-annonce des Cobayes, une comédie sur le désir et la passion dans le couple,
-                    portée par Thomas Ngijol et Judith Chemla. Au cinéma le 25 novembre.
-                </p>
-            </article>
-            <div class="col-lg-5 my-lg-5 order-1 order-lg-2">
-                <img src="{{ asset('assets/img/actualites/Les-Cobayes.jpg') }}" alt="" class="img-fluid">
-            </div>
-        </div>
-
-        <div class="row justify-content-around align-items-center">
-            {# Actu 5 #}
-            <div class="col-lg-5">
-                <img src="{{ asset('assets/img/actualites/Claude-Lelouch.jpg') }}" alt="" class="img-fluid">
-            </div>
-            <article class="my-4 col-lg-5">
-                <p class="txtJustify mb-lg-0">Claude Lelouch réunit une vaste distribution pour son dernier film. Il
-                    s'est
-                    confié sur le tournage de son
-                    prochain et dernier long métrage, "L'Amour, c'est mieux que la vie". Il y réunira un casting
-                    hétéroclite,
-                    parmi lesquels Jean-Louis Trintignant, Kev Adams et Béatrice Dalle.</p>
-            </article>
-
-            {# Actu 6 #}
-            <article class="my-4 col-lg-5 order-2 order-lg-1">
-                <p class="txtJustify mb-lg-0">Bande-annonce Les Cobayes : Thomas Ngijol et Judith Chemla prêts à
-                    tout pour
-                    sauver leur couple.
-                    Découvrez la bande-annonce des Cobayes, une comédie sur le désir et la passion dans le couple,
-                    portée par
-                    Thomas Ngijol et Judith Chemla. Au cinéma le 25 novembre.
-                </p>
-            </article>
-            <div class="col-lg-5 my-lg-5 order-1 order-lg-2">
-                <img src="{{ asset('assets/img/actualites/Les-Cobayes.jpg') }}" alt="" class="img-fluid">
-            </div>
-        </div>
-
-        <div class="row justify-content-around align-items-center">
-            {# Actu 7 #}
-            <div class="col-lg-5">
-                <img src="{{ asset('assets/img/actualites/Claude-Lelouch.jpg') }}" alt="" class="img-fluid">
-            </div>
-            <article class="my-4 col-lg-5">
-                <p class="txtJustify mb-lg-0">Claude Lelouch réunit une vaste distribution pour son dernier film. Il
-                    s'est
-                    confié sur le tournage de son
-                    prochain et dernier long métrage, "L'Amour, c'est mieux que la vie". Il y réunira un casting
-                    hétéroclite,
-                    parmi lesquels Jean-Louis Trintignant, Kev Adams et Béatrice Dalle.</p>
-            </article>
-
-            {# Actu 8 #}
-            <article class="my-4 col-lg-5 order-2 order-lg-1">
-                <p class="txtJustify mb-lg-0">Bande-annonce Les Cobayes : Thomas Ngijol et Judith Chemla prêts à
-                    tout pour
-                    sauver leur couple.
-                    Découvrez la bande-annonce des Cobayes, une comédie sur le désir et la passion dans le couple,
-                    portée par
-                    Thomas Ngijol et Judith Chemla. Au cinéma le 25 novembre.
-                </p>
-            </article>
-            <div class="col-lg-5 my-lg-5 order-1 order-lg-2">
-                <img src="{{ asset('assets/img/actualites/Les-Cobayes.jpg') }}" alt="" class="img-fluid">
-            </div>
-        </div>
-
-        <div class="row justify-content-around align-items-center">
-            {# Actu 9 #}
-            <div class="col-lg-5">
-                <img src="{{ asset('assets/img/actualites/Claude-Lelouch.jpg') }}" alt="" class="img-fluid">
-            </div>
-            <article class="my-4 col-lg-5">
-                <p class="txtJustify mb-lg-0">Claude Lelouch réunit une vaste distribution pour son dernier film. Il
-                    s'est
-                    confié sur le tournage de son
-                    prochain et dernier long métrage, "L'Amour, c'est mieux que la vie". Il y réunira un casting
-                    hétéroclite,
-                    parmi lesquels Jean-Louis Trintignant, Kev Adams et Béatrice Dalle.</p>
-            </article>
-
-            {# Actu 10 #}
-            <article class="my-4 col-lg-5 order-2 order-lg-1">
-                <p class="txtJustify mb-lg-0">Bande-annonce Les Cobayes : Thomas Ngijol et Judith Chemla prêts à
-                    tout pour
-                    sauver leur couple.
-                    Découvrez la bande-annonce des Cobayes, une comédie sur le désir et la passion dans le couple,
-                    portée par
-                    Thomas Ngijol et Judith Chemla. Au cinéma le 25 novembre.
-                </p>
-            </article>
-            <div class="col-lg-5 my-lg-5 order-1 order-lg-2">
-                <img src="{{ asset('assets/img/actualites/Les-Cobayes.jpg') }}" alt="" class="img-fluid">
-            </div>
-        </div>
 
         {# BOUTON NEXT PAGE #}
         <div class="row mb-5 pb-5 text-center justify-content-center align-items-center my-lg-5 pb-lg-0">
