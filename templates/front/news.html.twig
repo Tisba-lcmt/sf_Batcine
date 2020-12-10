@@ -56,28 +56,28 @@
     <section class="container" id="actualites">
         <h1 class="mb-3 text-center mb-lg-5 mt-lg-4 pb-lg-3">Actualités</h1>
 
-        {% for new in news %}
         <div class="row justify-content-around align-items-center">
-            {# Si mon tour de boucle est impair #}
-            {% if loop.index is odd %}
-            {# Actu 1 #}
-            <div class="col-lg-5">
-                <img src="{{ asset('uploads/news/' ~ new.image) }}" alt="" class="img-fluid">
-            </div>
-            <article class="my-4 col-lg-5">
-                <p class="txtJustify mb-lg-0">{{ new.content }}</p>
-            </article>
-            {% else %}
-            {# Actu 2 #}
-            <article class="my-4 col-lg-5 order-2 order-lg-1">
-                <p class="txtJustify mb-lg-0">{{ new.content }}</p>
-            </article>
-            <div class="col-lg-5 my-lg-5 order-1 order-lg-2">
-                <img src="{{ asset('uploads/news/' ~ new.image) }}" alt="" class="img-fluid">
-            </div>
-            {% endif %}
+            {% for new in news %}
+                {# Si mon tour de boucle est impair #}
+                {% if loop.index is odd %}
+                    {# Actu 1 #}
+                    <div class="col-lg-5">
+                        <img src="{{ asset('uploads/news/' ~ new.image) }}" alt="" class="img-fluid">
+                    </div>
+                    <article class="my-4 col-lg-5">
+                        <p class="txtJustify mb-lg-0">{{ new.content }}</p>
+                    </article>
+                {% else %}
+                    {# Actu 2 #}
+                    <article class="my-4 col-lg-5 order-2 order-lg-1">
+                        <p class="txtJustify mb-lg-0">{{ new.content }}</p>
+                    </article>
+                    <div class="col-lg-5 my-lg-5 order-1 order-lg-2">
+                        <img src="{{ asset('uploads/news/' ~ new.image) }}" alt="" class="img-fluid">
+                    </div>
+                {% endif %}
+            {% endfor %}
         </div>
-        {% endfor %}
 
 
         {# BOUTON NEXT PAGE #}
