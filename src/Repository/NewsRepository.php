@@ -22,7 +22,13 @@ class NewsRepository extends ServiceEntityRepository
 
     public function findNewsLimit()
     {
-
+        return $this->createQueryBuilder('n')
+            ->addSelect('n.publicationDate')
+            ->orderBy('n.publicationDate', 'DESC')
+            ->setMaxResults(2)
+            ->getQuery()
+            ->getResult()
+        ;
     }
     // /**
     //  * @return News[] Returns an array of News objects
