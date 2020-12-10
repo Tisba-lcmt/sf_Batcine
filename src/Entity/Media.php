@@ -75,6 +75,11 @@ class Media
      */
     private $category;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $releaseDate;
+
     public function __construct()
     {
         $this->criticalOpinionsMedia = new ArrayCollection();
@@ -270,6 +275,18 @@ class Media
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getReleaseDate(): ?\DateTimeInterface
+    {
+        return $this->releaseDate;
+    }
+
+    public function setReleaseDate(?\DateTimeInterface $releaseDate): self
+    {
+        $this->releaseDate = $releaseDate;
 
         return $this;
     }

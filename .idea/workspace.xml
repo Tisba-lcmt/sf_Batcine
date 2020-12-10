@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f6e2f55-ff5b-4710-8672-ece12f24ff12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/test/test.home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/admin/AdminNewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/AdminNewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/front/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/front/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/front/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/front/PagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/NewsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/NewsRepository.php" afterDir="false" />
-    </list>
+    <list default="true" id="0f6e2f55-ff5b-4710-8672-ece12f24ff12" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -189,7 +182,7 @@
       <workItem from="1607413157859" duration="4829000" />
       <workItem from="1607423722734" duration="8890000" />
       <workItem from="1607500682234" duration="28060000" />
-      <workItem from="1607586911409" duration="7091000" />
+      <workItem from="1607586911409" duration="7459000" />
     </task>
     <servers />
   </component>
@@ -197,10 +190,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="562" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1606913253960">
+    <state x="562" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1607596493116">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="562" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1606913253960" />
+    <state x="562" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1607596493116" />
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607595005341">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
