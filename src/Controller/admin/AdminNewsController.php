@@ -9,7 +9,9 @@ use App\Form\NewsType;
 use App\Repository\NewsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
@@ -17,6 +19,8 @@ class AdminNewsController extends AbstractController
 {
     /**
      * @Route("/admin/news", name="admin_news_list")
+     * @param NewsRepository $newsRepository
+     * @return Response
      */
 
     public function newsList(NewsRepository $newsRepository)
@@ -30,6 +34,10 @@ class AdminNewsController extends AbstractController
 
     /**
      * @Route("/admin/new/insert", name="admin_new_insert")
+     * @param Request $request
+     * @param EntityManagerInterface $entityManager
+     * @param SluggerInterface $slugger
+     * @return RedirectResponse|Response
      */
 
     public function insertNew(
@@ -73,6 +81,12 @@ class AdminNewsController extends AbstractController
 
     /**
      * @Route("/admin/new/update/{id}", name="admin_new_update")
+     * @param $id
+     * @param NewsRepository $newsRepository
+     * @param Request $request
+     * @param EntityManagerInterface $entityManager
+     * @param SluggerInterface $slugger
+     * @return RedirectResponse|Response
      */
 
     public function updateNew(

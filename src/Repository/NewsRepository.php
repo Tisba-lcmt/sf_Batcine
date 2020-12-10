@@ -19,6 +19,11 @@ class NewsRepository extends ServiceEntityRepository
         parent::__construct($registry, News::class);
     }
 
+
+    public function findNewsLimit()
+    {
+
+    }
     // /**
     //  * @return News[] Returns an array of News objects
     //  */

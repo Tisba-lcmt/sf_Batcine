@@ -28,6 +28,9 @@ class NewsController extends AbstractController
 
     /**
      * @Route("/new/show/{id}", name="new_show")
+     * @param $id
+     * @param NewsRepository $newsRepository
+     * @return Response
      */
 
     public function newShow($id, NewsRepository $newsRepository)
