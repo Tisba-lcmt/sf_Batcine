@@ -4,38 +4,6 @@
     Films Prochainement
 {% endblock title %}
 
-{% block NavLienActive %}
-    <li class="d-none text-center typohead col-lg-2 d-lg-block">
-        <a href="{{ path('homepage') }}">Accueil</a>
-    </li>
-    <li class="d-none text-center typohead col-lg-2 d-lg-block">
-        <a href="{{ path('news_list') }}">Actualités</a>
-    </li>
-    <li class="cercle">
-        <div id="circletransp">
-            <a href="{{ path('homepage') }}">
-                <img src="{{ asset('assets/img/logo/logo_batcine_blanc.svg') }}"
-                     alt="Batcine Logo" title="Batcine Logo"
-                     class="img-fluid" id="logo">
-            </a>
-        </div>
-    </li>
-    <li class="d-none text-center typohead menu z_menu col-lg-2 d-lg-block">
-        <a href="{{ path('movies_list') }}" class="active">Films</a>
-        <ul class="sub my-lg-5">
-            <li class="sub1 px-lg-3 pt-lg-3 pb-lg-1">
-                <a href="{{ path('currentMovies_list') }}" class="typolimenu">Film à l'affiche</a>
-            </li>
-            <li class="sub2 pb-lg-3">
-                <a href="{{ path('upcomingMovies_list') }}" class="typolimenu active">Prochainement</a>
-            </li>
-        </ul>
-    </li>
-    <li class="d-none text-center typohead col-lg-2 d-lg-block">
-        <a href="{{ path('series_list') }}">Séries</a>
-    </li>
-{% endblock %}
-
 {% block main %}
 
 {# Début MAIN #}

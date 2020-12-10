@@ -58,10 +58,10 @@
         <ul class="row justify-content-between py-lg-3">
             {% block NavLienActive %}
             <li class="d-none text-center typohead col-lg-2 d-lg-block">
-                <a href="{{ path('homepage') }}">Accueil</a>
+                <a href="{{ path('homepage') }}" class="{% if app.request.get('_route') == 'homepage' %} active {% endif %}">Accueil</a>
             </li>
             <li class="d-none text-center typohead col-lg-2 d-lg-block">
-                <a href="{{ path('news_list') }}">Actualités</a>
+                <a href="{{ path('news_list') }}" class="{% if app.request.get('_route') == 'news_list' %} active {% endif %}">Actualités</a>
             </li>
             <li class="cercle">
                 <div id="circletransp">
@@ -73,18 +73,21 @@
                 </div>
             </li>
             <li class="d-none text-center typohead menu z_menu col-lg-2 d-lg-block">
-                <a href="{{ path('movies_list') }}">Films</a>
+                <a href="{{ path('movies_list') }}"
+                   class="{% if app.request.get('_route') == 'movies_list' %} active {% endif %}">Films</a>
                 <ul class="sub my-lg-5">
                     <li class="sub1 px-lg-3 pt-lg-3 pb-lg-1">
-                        <a href="{{ path('currentMovies_list') }}" class="typolimenu">Film à l'affiche</a>
+                        <a href="{{ path('currentMovies_list') }}"
+                           class="typolimenu {% if app.request.get('_route') == 'currentMovies_list' %} active {% endif %}">Film à l'affiche</a>
                     </li>
                     <li class="sub2 pb-lg-3">
-                        <a href="{{ path('upcomingMovies_list') }}" class="typolimenu">Prochainement</a>
+                        <a href="{{ path('upcomingMovies_list') }}"
+                           class="typolimenu {% if app.request.get('_route') == 'upcomingMovies_list' %} active {% endif %}">Prochainement</a>
                     </li>
                 </ul>
             </li>
             <li class="d-none text-center typohead col-lg-2 d-lg-block">
-                <a href="{{ path('series_list') }}">Séries</a>
+                <a href="{{ path('series_list') }}" class="{% if app.request.get('_route') == 'series_list' %} active {% endif %}">Séries</a>
             </li>
             {% endblock %}
             <li class="text-center typohead col-lg-1" id="login">
@@ -193,23 +196,20 @@
 
 
 {# Début FOOTER #}
-
 <footer>
-
-    {% block activeNavMenuSticky %}
     <nav class="navbarStickyMenu">
         <ul class="navList">
-            <li><a href="{{ path('homepage') }}">
+            <li><a href="{{ path('homepage') }}" class="{% if app.request.get('_route') == 'homepage' %} active {% endif %}">
                     <div class="navIcons"><img src="{{ asset('assets/img/icon/home.svg') }}" alt="home" class="resp"></div>Accueil
                 </a></li>
-            <li><a href="{{ path('news_list') }}">
+            <li><a href="{{ path('news_list') }}" class="{% if app.request.get('_route') == 'news_list' %} active {% endif %}">
                     <div class="navIcons"><img src="{{ asset('assets/img/icon/actualite.svg') }}" alt="actualite" class="resp"></div>Actualites
                 </a></li>
-            <li><a href="{{ path('movies_list') }}">
+            <li><a href="{{ path('movies_list') }}" class="{% if app.request.get('_route') == 'movies_list' %} active {% endif %}">
                     <div class="navIcons" id="navIcons3"><img src="{{ asset('assets/img/icon/poster.svg') }}" alt="poster" class="resp"></div>
                     Films
                 </a></li>
-            <li><a href="{{ path('series_list') }}">
+            <li><a href="{{ path('series_list') }}" class="{% if app.request.get('_route') == 'series_list' %} active {% endif %}">
                     <div class="navIcons"><img src="{{ asset('assets/img/icon/movie.svg') }}" alt="movie" class="resp"></div>Series
                 </a></li>
             <li><a href="#">
@@ -217,7 +217,6 @@
                 </a></li>
         </ul>
     </nav>
-    {% endblock %}
 
     <div class="container-fluid" id="footer">
         <nav class="container pt-lg-5">
