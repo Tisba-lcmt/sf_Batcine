@@ -134,12 +134,27 @@ class AdminNewsController extends AbstractController
     }
 
     /**
-     * @Route("/admin/new/delete", name="admin_new_delete")
+     * @Route("/admin/new/delete/{id}", name="admin_new_delete")
+     * @param $id
+     * @param NewsRepository $newsRepository
+     * @param EntityManagerInterface $entityManager
+     * @return Response
      */
 
-    public function deleteNew()
+    public function deleteNew(
+        $id,
+        NewsRepository $newsRepository,
+        EntityManagerInterface $entityManager
+    )
     {
-        return $this->render('/admin/deleteNews.html.twig');
+        $new = $newsRepository->find($id);
+
+        if (!is_null($new)) {
+            $entityManager->remove($new);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('admin_news_list');
     }
 
 }
