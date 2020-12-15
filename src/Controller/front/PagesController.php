@@ -27,7 +27,7 @@ class PagesController extends AbstractController
         // les plus récentes (dernières actus) et je stock le résultat dans la variable $lastNews.
 
         // Cette méthode limit permet de ne pas récupérer toutes mes actu pour en prendre que 2.
-        $lastNews = $newsRepository->findBy([], ['publicationDate' => 'DESC'], 2, null);
+        $lastNews = $newsRepository->findBy([], ['publicationDate' => 'ASC'], 2, null);
 
         // Je stock dans une variable $now, la date d'aujourd'hui à l'aide de la classe DateTime
         $now = new \DateTime('now');

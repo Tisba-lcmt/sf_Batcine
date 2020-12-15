@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0f6e2f55-ff5b-4710-8672-ece12f24ff12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/CriticalOpinion.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/CriticalOpinion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/front/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/front/PagesController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,18 +138,18 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\projets\sf_Batcine" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\projets\sf_Batcine\templates\front" />
       <recent name="C:\xampp\htdocs\projets\sf_Batcine\templates\admin" />
       <recent name="C:\xampp\htdocs\projets\sf_Batcine\templates\test" />
       <recent name="C:\xampp\htdocs\projets\sf_Batcine\src\Controller\front" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\projets\sf_Batcine" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -186,7 +186,11 @@
       <workItem from="1607423722734" duration="8890000" />
       <workItem from="1607500682234" duration="28060000" />
       <workItem from="1607586911409" duration="23952000" />
-      <workItem from="1607697065430" duration="2791000" />
+      <workItem from="1607697065430" duration="4374000" />
+      <workItem from="1607782325025" duration="594000" />
+      <workItem from="1607885076072" duration="627000" />
+      <workItem from="1607939069173" duration="3302000" />
+      <workItem from="1608018668224" duration="666000" />
     </task>
     <servers />
   </component>
@@ -210,10 +214,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="577" y="106" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1606924546817" />
-    <state x="276" y="0" key="SettingsEditor" timestamp="1606903100488">
+    <state x="276" y="0" key="SettingsEditor" timestamp="1607959968705">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="276" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606903100488" />
+    <state x="276" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607959968705" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1606905185127">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
