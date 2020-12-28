@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0f6e2f55-ff5b-4710-8672-ece12f24ff12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/front/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/front/PagesController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +137,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -190,7 +190,14 @@
       <workItem from="1607782325025" duration="594000" />
       <workItem from="1607885076072" duration="627000" />
       <workItem from="1607939069173" duration="3302000" />
-      <workItem from="1608018668224" duration="666000" />
+      <workItem from="1608018668224" duration="724000" />
+      <workItem from="1608150494859" duration="227000" />
+      <workItem from="1608194818348" duration="628000" />
+      <workItem from="1608550593310" duration="7545000" />
+      <workItem from="1608637538118" duration="4296000" />
+      <workItem from="1608713281612" duration="15093000" />
+      <workItem from="1608798341784" duration="7938000" />
+      <workItem from="1609143500613" duration="3085000" />
     </task>
     <servers />
   </component>
@@ -206,18 +213,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607595005341" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1607423730054">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1608817193932">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1607423730054" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608817193932" />
     <state x="577" y="106" key="NewPhpClassDialog" timestamp="1606924546817">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="577" y="106" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1606924546817" />
-    <state x="276" y="0" key="SettingsEditor" timestamp="1607959968705">
+    <state x="276" y="0" key="SettingsEditor" timestamp="1608725913747">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="276" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607959968705" />
+    <state x="276" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608725913747" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1606905185127">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -230,10 +237,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="0" y="0" width="1278" height="832" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1607447694869" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1606924603397">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1608745955108">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1606924603397" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1608745955108" />
     <state x="46" y="145" key="search.everywhere.popup" timestamp="1607417831827">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

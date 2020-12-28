@@ -25,7 +25,7 @@ class AdminNewsController extends AbstractController
 
     public function newsList(NewsRepository $newsRepository)
     {
-        $news = $newsRepository->findAll();
+        $news = $newsRepository->findBy([],['publicationDate' => 'DESC']);
 
         return $this->render('admin/news.html.twig', [
             'news' => $news
