@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\NewsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=NewsRepository::class)
@@ -19,16 +20,41 @@ class News
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotBlank(
+     *     message="Merci de remplir le titre !"
+     * )
+     *
+     * @Assert\Length(
+     *     min= 4,
+     *     max= 60,
+     *     minMessage="Le titre doit comporter au moins 4 caractères",
+     *     maxMessage="Le titre doit comporter au max 60 caractères"
+     * )
+     *
      */
     private $title;
 
     /**
      * @ORM\Column(type="text")
+     *
+     * @Assert\NotBlank(
+     *     message="Merci de remplir le titre !"
+     * )
      */
     private $content;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotBlank(
+     *     message="Merci d'upload une image' !"
+     * )
+     *
+     * @Assert\File(
+     *     mimeTypes={"application/jpg", "application/jpeg", "application/png", "application/gif", "application/bmp"},
+     *     mimeTypesMessage="Merci d'upload un fichier jpg/jpeg/gif/bmp"
+     * )
      */
     private $image;
 
@@ -93,7 +119,7 @@ class News
         return $this->creationDate;
     }
 
-    public function setCreationDate(\DateTimeInterface $creationDate): self
+    public function setCreationDate($creationDate): self
     {
         $this->creationDate = $creationDate;
 
@@ -105,7 +131,7 @@ class News
         return $this->publicationDate;
     }
 
-    public function setPublicationDate(\DateTimeInterface $publicationDate): self
+    public function setPublicationDate($publicationDate): self
     {
         $this->publicationDate = $publicationDate;
 
