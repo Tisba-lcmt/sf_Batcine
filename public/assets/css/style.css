@@ -441,14 +441,13 @@ header>nav a {
     @media screen and (max-width: 576px) {
         /**** Volet ****/
         .slider {
-            position: absolute;
             background-color: red;
             height: calc(100vh - 79px);
             position: fixed;
             width: 60vw;
             margin:  0;
             z-index: 5;
-            transition: ease-in 0.4s all;
+            transition: ease-in all 0.4s;
         }
 
         .hidden {

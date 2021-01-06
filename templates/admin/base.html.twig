@@ -20,7 +20,7 @@
             <li><a href="{{ path('admin_homepage') }}">Accueil</a></li>
             <li><a href="{{ path('admin_news_list') }}">Actualités</a></li>
             {% if app.user %}
-                <li><a href="">Déconnexion</a></li>
+                <li><a href="{{ path('app_logout') }}">Déconnexion</a></li>
             {% else %}
                 <li><a href="">Connexion</a></li>
             {% endif %}
