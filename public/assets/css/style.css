@@ -111,6 +111,30 @@ a:hover {
     align-items: center;
 }
 
+/** Custom Login **/
+
+.login h1 {
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.login .customLogin {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid #282E67;
+    background-color: #54C2F0;
+}
+
+.login .zoneTextLogin {
+    width: 90%;
+}
+
+.login .button{
+    background-color: #282E67;
+    color: white;
+    display: block;
+    margin: 16px auto 16px auto;
+}
 /** Custom Formulaire **/
 
 .form {
