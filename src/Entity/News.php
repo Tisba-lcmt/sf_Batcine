@@ -50,11 +50,6 @@ class News
      * @Assert\NotBlank(
      *     message="Merci d'upload une image' !"
      * )
-     *
-     * @Assert\File(
-     *     mimeTypes={"application/jpg", "application/jpeg", "application/png", "application/gif", "application/bmp"},
-     *     mimeTypesMessage="Merci d'upload un fichier jpg/jpeg/gif/bmp"
-     * )
      */
     private $image;
 

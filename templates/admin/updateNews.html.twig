@@ -16,8 +16,8 @@
             {{ form_widget(formView.content, {'attr': {'class': 'content'}}) }}
             <div class="errorStyle">{{ form_errors(formView.content) }}</div>
             <div></div>
-            {{ form_label(formView.image) }}
-            {{ form_widget(formView.image, {'attr': {'class': 'image'}}) }}
+            {{ form_label(formView.image) }} {# accept =  attribut HTML W3C, rajoute une contrainte #}
+            {{ form_widget(formView.image, {'attr': {'class': 'image', 'accept':"image/*"}} ) }}
             <div class="errorStyle">{{ form_errors(formView.image) }}</div>
             <div class="date">
                 <div>

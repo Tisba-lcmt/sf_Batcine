@@ -135,6 +135,11 @@ a:hover {
     display: block;
     margin: 16px auto 16px auto;
 }
+/**
+.borderRight {
+    border-right: solid 5px #54C2F0;
+}
+**/
 /** Custom Formulaire **/
 
 .form {
