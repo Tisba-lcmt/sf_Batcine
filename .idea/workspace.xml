@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0f6e2f55-ff5b-4710-8672-ece12f24ff12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,14 +142,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\projets\sf_Batcine" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\projets\sf_Batcine\templates\front" />
       <recent name="C:\xampp\htdocs\projets\sf_Batcine\templates\admin" />
       <recent name="C:\xampp\htdocs\projets\sf_Batcine\templates\test" />
       <recent name="C:\xampp\htdocs\projets\sf_Batcine\src\Controller\front" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\projets\sf_Batcine" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -211,7 +209,7 @@
       <workItem from="1609670527762" duration="1652000" />
       <workItem from="1609837770918" duration="4816000" />
       <workItem from="1609924640131" duration="5888000" />
-      <workItem from="1609939016626" duration="12984000" />
+      <workItem from="1609939016626" duration="16077000" />
     </task>
     <servers />
   </component>
@@ -259,9 +257,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1608745955108" />
-    <state x="46" y="145" key="search.everywhere.popup" timestamp="1607417831827">
+    <state x="46" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1610014912014">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="46" y="145" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607417831827" />
+    <state x="46" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1610014912014" />
   </component>
 </project>
