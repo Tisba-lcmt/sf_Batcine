@@ -1,0 +1,28 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}
+    Actualité
+{% endblock title %}
+
+{% block main %}
+
+    {# Début MAIN #}
+    <main>
+        <h1>Mon actualité</h1>
+
+        <section class="row mb-5">
+            <div class="card col-6 mx-auto">
+                <h1>{{ new.title }}</h1>
+                <a href="{{ path('admin_new_show', {'id': new.id}) }}" class="container">
+                    <div>
+                        <img src="{{ asset('uploads/news/' ~ new.image) }}" alt="" class="resp">
+                    </div>
+                    <p>{{ new.content }}</p>
+                </a>
+            </div>
+        </section>
+
+    </main>
+    {# Fin MAIN #}
+
+{% endblock main %}

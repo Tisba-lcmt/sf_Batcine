@@ -33,6 +33,22 @@ class AdminNewsController extends AbstractController
     }
 
     /**
+     * @Route("/admin/new/show/{id}", name="admin_new_show")
+     * @param $id
+     * @param NewsRepository $newsRepository
+     * @return Response
+     */
+
+    public function newShow($id, NewsRepository $newsRepository)
+    {
+        $news = $newsRepository->find($id);
+
+        return $this->render('admin/new.html.twig', [
+            'new' => $news
+        ]);
+    }
+
+    /**
      * @Route("/admin/new/insert", name="admin_new_insert")
      * @param Request $request
      * @param EntityManagerInterface $entityManager
