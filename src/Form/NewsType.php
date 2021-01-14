@@ -27,7 +27,7 @@ class NewsType extends AbstractType
                     new File([
                         'mimeTypes' => [
                             'image/jpg',
-                            'image.jpeg',
+                            'image/jpeg',
                             'image/png',
                             'image/gif',
                             'image/bmp'
