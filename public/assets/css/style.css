@@ -497,9 +497,9 @@ header>nav a {
         /** Navigation Position Logo **/
 
         .cercle{
-            bottom: 0;
-            top: 0;
+            bottom: 50%;
         }
+
         #circletransp {
             width: 70px;
             height: 70px;

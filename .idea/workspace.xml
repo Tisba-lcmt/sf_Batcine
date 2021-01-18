@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0f6e2f55-ff5b-4710-8672-ece12f24ff12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/NewsType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/NewsType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +225,10 @@
       <workItem from="1610106337126" duration="3689000" />
       <workItem from="1610374950013" duration="3809000" />
       <workItem from="1610439887743" duration="8458000" />
-      <workItem from="1610615494186" duration="1864000" />
+      <workItem from="1610615494186" duration="6734000" />
+      <workItem from="1610717619843" duration="5132000" />
+      <workItem from="1610905176756" duration="3219000" />
+      <workItem from="1610922410849" duration="930000" />
     </task>
     <servers />
   </component>
@@ -233,10 +236,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="395" y="90" key="#Inspections" timestamp="1609865613067">
+    <state x="395" y="90" key="#Inspections" timestamp="1610906399215">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="395" y="90" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1609865613067" />
+    <state x="395" y="90" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1610906399215" />
     <state x="562" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1607596493116">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -253,10 +256,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="577" y="106" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1606924546817" />
-    <state x="276" y="0" key="SettingsEditor" timestamp="1610623061411">
+    <state x="276" y="0" key="SettingsEditor" timestamp="1610915578858">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="276" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1610623061411" />
+    <state x="276" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1610915578858" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1606905185127">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -273,9 +276,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1608745955108" />
-    <state x="46" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1610106352888">
+    <state x="46" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1610726374907">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="46" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1610106352888" />
+    <state x="46" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1610726374907" />
   </component>
 </project>
